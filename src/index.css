@@ -10,9 +10,14 @@
   --highlight-black : #333333;
   --font-headlines: 'Markazi Text';
   --font-paragraphs: 'Karla';
-  --text-size-24: 24px;
+  --section-title: 48px;
+  --section-title-weight: bold;
   --card-title: 24px;
   --card-title-weight: bold;
+  --card-price: 20px;
+  --card-line-height: 1.5px;
+  --par-text: 20px;
+  --border-radius: 6px;  
 }
 
 body {
@@ -22,6 +27,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
 }
 
 .container {
@@ -30,6 +37,18 @@ body {
   height: 100vh;
   /* max-width: 1440px;
   margin: auto; */
+}
+
+button {
+  padding: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  color: var(--highlight-black);
+  font-weight: 600;
+  font-size: var(--font-paragraphs);
+  background-color: var(--primary-yellow);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--highlight-cream);
 }
 
 a {
@@ -55,7 +74,6 @@ p {
 /* ------------------------> HEADER ------------------------> */
 
 .header {
-  height: 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -88,7 +106,7 @@ p {
 
 .header nav li:nth-child(4) {
   border: 1px solid var(--primary-yellow);
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   color: var(--primary-yellow);
 }
 
@@ -96,7 +114,7 @@ p {
   display: none;
   cursor: pointer;
   position: absolute;
-  top: 22px;
+  top: 17px;
   left: 25px;
 }
 
@@ -105,7 +123,12 @@ p {
   width: 40px;
 }
 
-/* --------> HEADER-MOBILE ---------> */
+.hamburger-btn svg:active {
+  transform: rotate(90deg);
+  transition: all 0.2s linear;
+}
+
+/* --------> HAMBURGER ---------> */
 
 .hide-content {
   display: none;
@@ -113,6 +136,7 @@ p {
 
 .show-content {
   display: block;
+  transition: all 0.4s ease;
 }
 
 .hamburger {
@@ -121,7 +145,7 @@ p {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: rgb(0 0 0 / 90%);
 }
 
@@ -129,6 +153,8 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+  overflow: scroll;
   height: 100%;
   width: 100%;
   color: var(--highlight-cream);
@@ -148,7 +174,7 @@ p {
 .hamburger-content nav ul li:nth-child(4),
 .hamburger-content nav ul li:nth-child(5) {
   border: 1px solid var(--primary-yellow);
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   color: yellow;
 }
 
@@ -159,6 +185,46 @@ p {
   cursor: pointer;
   height: 30px;
   padding: 30px;
+}
+
+/* --------> HEADER MAIN ---------> */
+
+.header-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 90vh;
+  background-color: #495E57;
+  padding: 30px;
+}
+
+.header-main img {
+  height: 360px;
+  width: 320px;
+}
+
+.header-main-content h2 {
+  max-width: 800px;
+  color: var(--primary-yellow);
+  font-family: var(--font-headlines);
+  font-size: 80px;
+  margin: 0;
+}
+
+.header-main-content h3 {
+  color: var(--highlight-cream);
+  font-family: var(--font-headlines);
+  font-size: 40px;
+}
+
+.header-main-content p {
+  margin: 20px 0px;
+  font-family: var(--font-paragraphs);
+  max-width: 300px;
+  color: var(--highlight-cream);
+  font-size: 20px;
 }
 
 /* ------------------------> FOOTER ------------------------> */
@@ -202,13 +268,30 @@ p {
   .hamburger-btn {
     display: block;
   }
+  .header-main-content h2 {
+    font-size: 40px;
+  }
+  .header-main img {
+    height: 150px;
+    width: 120px;
+  }
 }
 
-/* @keyframes hamburger {
-  0% {
-    transform: rotateZ(0);
+@media (max-width: 748px) {
+  .header-main {
+    flex-direction: column;
   }
-  100% {
-    transform: rotateZ(90deg);
+  .header-main-content h2 {
+    font-size: 40px;
   }
-} */
+  .header-main-content h3 {
+    font-size: 20px;
+  }
+  .header-main-content p {
+    font-size: 16px;
+  }
+  .header-main img {
+    height: 270px;
+    width: 208px;
+  }
+}

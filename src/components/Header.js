@@ -32,6 +32,21 @@ export default function Header() {
           <Nav />
         </span>
       </div>
+      <div className="header-main">
+        <div className="header-main-content">
+          <h2>Little Lemon</h2>
+          <h3>Chicago</h3>
+          <p>We are a family mediterranean restaurant.
+            focused on traditional recipes, served with a modern twist.
+          </p>
+          <button>
+            <a href="/">Reserve a table</a>
+          </button>
+        </div>
+        <div>
+          <img src={require('../assets/img.JPG')} alt='Menu'/>
+        </div>
+      </div>
     </header>
   )
 }
