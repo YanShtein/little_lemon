@@ -18,17 +18,17 @@ export default function Footer() {
         <section>
           <p>Contact</p>
           <ul>
-            <li><a href='#'>Chicago, Down street 15/89</a></li>
-            <li><a href='#'>+255682234</a></li>
-            <li><a href='#'>littlelemon@example.com</a></li>
+            <li>Chicago, Down street 15/89</li>
+            <li>+255682234</li>
+            <li>littlelemon@example.com</li>
           </ul>
         </section>
         <section>
           <p>Social Media</p>
           <ul>
-            <li><a href='#'>Instagram</a></li>
-            <li><a href='#'>Facebook</a></li>
-            <li><a href='#'>YouTube</a></li>
+            <li><a href='#ins'>Instagram</a></li>
+            <li><a href='face'>Facebook</a></li>
+            <li><a href='#you'>YouTube</a></li>
           </ul>
         </section>
       </div>

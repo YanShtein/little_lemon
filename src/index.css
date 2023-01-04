@@ -26,6 +26,8 @@ body {
 
 .container {
   position: relative;
+  width: 100%;
+  height: 100vh;
   /* max-width: 1440px;
   margin: auto; */
 }
@@ -50,7 +52,7 @@ p {
   padding: 0;
 }
 
-/* -----> HEADER -----> */
+/* ------------------------> HEADER ------------------------> */
 
 .header {
   height: 80px;
@@ -77,12 +79,78 @@ p {
   margin: 0 10px;
 }
 
-.header a:hover {
+.header nav a:hover {
   color: var(--primary-green);
   border-bottom: 2px solid var(--primary-green);
 }
 
-/* -----> FOOTER -----> */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger svg {
+  height: 40px;
+  width: 40px;
+}
+
+/* --------> HEADER-MOBILE ---------> */
+
+.hide-mobile {
+  display: none;
+}
+
+.show-mobile {
+  display: block;
+}
+
+.nav-mobile-backdrop {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(0 0 0 / 90%);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: var(--highlight-cream);
+}
+
+.mobile-nav nav li {
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+}
+
+.mobile-nav nav li a {
+  padding: 20px;
+  font-weight: 600;
+}
+
+.mobile-nav nav ul li:nth-child(4),
+.mobile-nav nav ul li:nth-child(5) {
+  border: 1px solid var(--primary-yellow);
+  border-radius: 6px;
+  color: yellow;
+}
+
+.mobile-nav-exit svg {
+  position: absolute;
+  left: 14px;
+  top: -5px;
+  cursor: pointer;
+  height: 30px;
+  padding: 30px;
+}
+
+/* ------------------------> FOOTER ------------------------> */
 
 .footer {
   color: var(--highlight-cream);
@@ -109,6 +177,17 @@ p {
   border-bottom: 1px solid var(--highlight-cream);
 }
 
-.footer a {
+.footer a,
+.footer li {
   font-size: 14px;
+  font-family: var(--font-paragraphs);
+}
+
+@media (max-width: 550px) {
+  .desktop-nav {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
 }
