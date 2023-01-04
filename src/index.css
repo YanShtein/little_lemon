@@ -67,6 +67,7 @@ p {
 .header img {
   width: 200px;
   height: 50px;
+  margin: 10px;
 }
 
 .header ul {
@@ -77,6 +78,7 @@ p {
 
 .header ul li {
   margin: 0 10px;
+  padding: 10px;
 }
 
 .header nav a:hover {
@@ -84,27 +86,36 @@ p {
   border-bottom: 2px solid var(--primary-green);
 }
 
-.hamburger {
-  display: none;
-  cursor: pointer;
+.header nav li:nth-child(4) {
+  border: 1px solid var(--primary-yellow);
+  border-radius: 6px;
+  color: var(--primary-yellow);
 }
 
-.hamburger svg {
+.hamburger-btn {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 22px;
+  left: 25px;
+}
+
+.hamburger-btn svg {
   height: 40px;
   width: 40px;
 }
 
 /* --------> HEADER-MOBILE ---------> */
 
-.hide-mobile {
+.hide-content {
   display: none;
 }
 
-.show-mobile {
+.show-content {
   display: block;
 }
 
-.nav-mobile-backdrop {
+.hamburger {
   position: fixed;
   z-index: 90;
   top: 0;
@@ -114,7 +125,7 @@ p {
   background: rgb(0 0 0 / 90%);
 }
 
-.mobile-nav {
+.hamburger-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -123,28 +134,28 @@ p {
   color: var(--highlight-cream);
 }
 
-.mobile-nav nav li {
+.hamburger-content nav li {
   margin: 30px;
   padding: 20px;
   text-align: center;
 }
 
-.mobile-nav nav li a {
+.hamburger-content nav li a {
   padding: 20px;
   font-weight: 600;
 }
 
-.mobile-nav nav ul li:nth-child(4),
-.mobile-nav nav ul li:nth-child(5) {
+.hamburger-content nav ul li:nth-child(4),
+.hamburger-content nav ul li:nth-child(5) {
   border: 1px solid var(--primary-yellow);
   border-radius: 6px;
   color: yellow;
 }
 
-.mobile-nav-exit svg {
+.hamburger-content-exit svg {
   position: absolute;
-  left: 14px;
-  top: -5px;
+  left: 0px;
+  top: -3px;
   cursor: pointer;
   height: 30px;
   padding: 30px;
@@ -154,6 +165,7 @@ p {
 
 .footer {
   color: var(--highlight-cream);
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -183,11 +195,20 @@ p {
   font-family: var(--font-paragraphs);
 }
 
-@media (max-width: 550px) {
-  .desktop-nav {
+@media (max-width: 682px) {
+  .nav {
     display: none;
   }
-  .hamburger {
+  .hamburger-btn {
     display: block;
   }
 }
+
+/* @keyframes hamburger {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(90deg);
+  }
+} */

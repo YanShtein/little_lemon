@@ -3,32 +3,32 @@ import { exitSvg, hamburgerSvg } from '../assets/svg';
 import { useState } from "react";
 
 export default function Header() {
-  const [showMobile, setShowMobile] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  function handleMobile() {
-    setShowMobile(true);
+  function toggleHamburger() {
+    setOpen(true);
   };
 
   return (
     <header>
-      <div className={`nav-mobile-backdrop ${showMobile ? 'show-mobile' : 'hide-mobile'}`}>
-        <div className="mobile-nav">
+      <div className={`hamburger ${open ? 'show-content' : 'hide-content'}`}>
+        <div className="hamburger-content">
           <span 
-            className="mobile-nav-exit"
-            onClick={() => setShowMobile(false)}>{exitSvg}
+            className="hamburger-content-exit"
+            onClick={() => setOpen(false)}>{exitSvg}
           </span>
           <Nav />
         </div>
       </div>
+      <span 
+        className="hamburger-btn" 
+        onClick={toggleHamburger}>{hamburgerSvg}
+      </span>
       <div className="header">
-        <span 
-          className="hamburger" 
-          onClick={handleMobile}>{hamburgerSvg}
-        </span>
         <a href="/">
           <img src={require('../assets/logo.png')} alt="Little Lemon Logo"/>
         </a>
-        <span className="desktop-nav">
+        <span className="nav">
           <Nav />
         </span>
       </div>

@@ -1,6 +1,5 @@
-
-
 export default function Nav() {
+
   return (
     <nav>
       <ul>
@@ -13,4 +12,4 @@ export default function Nav() {
       </ul>
     </nav>
   )
-}
+};
