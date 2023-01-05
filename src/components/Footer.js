@@ -1,9 +1,12 @@
+import '../assets/css/shared.css';
+import '../assets/css/footer.css';
+
 
 export default function Footer() {
   return (
     <footer>
       <div className="footer">
-        <img src={require('../assets/lemon.JPG')} alt="Lemon" />
+        <img src={require('../assets/images/lemon.JPG')} alt="Lemon" />
         <section>
           <p>Doormat Navigation</p>
           <ul>

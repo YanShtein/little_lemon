@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+
+:root {
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-orange: #EE9972;
+  --secondary-cream: #FBDABB;
+  --highlight-cream: #EDEFEE;
+  --highlight-black: #333333;
+  --font-headlines: 'Markazi Text';
+  --font-paragraphs: 'Karla';
+  --section-title: 48px;
+  --section-title-weight: bold;
+  --card-title: 24px;
+  --card-title-weight: bold;
+  --card-price: 20px;
+  --card-line-height: 1.5px;
+  --par-text: 20px;
+  --border-radius: 6px;  
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* max-width: 1440px;
+  margin: auto; */
+}
+
+button {
+  padding: 10px;
+  margin: 10px auto;
+  cursor: pointer;
+  font-family: var(--font-paragraphs);
+  color: var(--highlight-black);
+  font-weight: 600;
+  font-size: var(--font-paragraphs);
+  background-color: var(--primary-yellow);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--highlight-cream);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-paragraphs);
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+

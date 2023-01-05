@@ -1,5 +1,7 @@
+import '../../assets/css/shared.css';
+import '../../assets/css/header.css';
 import Nav from "./Nav";
-import { exitSvg, hamburgerSvg } from '../assets/svg';
+import { exitSvg, hamburgerSvg } from '../../assets/svg';
 import { useState } from "react";
 
 export default function Header() {
@@ -26,7 +28,7 @@ export default function Header() {
       </span>
       <div className="header">
         <a href="/">
-          <img src={require('../assets/logo.png')} alt="Little Lemon Logo"/>
+          <img src={require('../../assets/images/logo.png')} alt="Little Lemon Logo"/>
         </a>
         <span className="nav">
           <Nav />
@@ -44,7 +46,7 @@ export default function Header() {
           </button>
         </div>
         <div>
-          <img src={require('../assets/img.JPG')} alt='Menu'/>
+          <img src={require('../../assets/images/img.JPG')} alt='Menu'/>
         </div>
       </div>
     </header>
