@@ -1,6 +1,10 @@
 main {
-  max-width: 1155px;
+  max-width: 1130px;
   margin: auto;
+}
+
+#specials {
+  margin: 50px;
 }
 
 .specials-content {
@@ -8,14 +12,21 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 110px;
-  margin: 60px 0;
+  gap: 40px;
+  margin: 30px 0;
 }
 
-.section-title {
+.specials-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.title {
   font-size: 24px;
   text-align: left;
-  margin: 20px;
+  font-family: var(--font-paragraphs);
 }
 
 .specials-content-card {
@@ -72,4 +83,10 @@ main {
   width: 20px;
   vertical-align: middle;
   margin-left: 10px;
+}
+
+@media (max-width: 682px) {
+  .specials-content {
+    gap: 20px;
+  }
 }

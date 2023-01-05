@@ -8,7 +8,10 @@ export default function Main() {
   return (
     <main>
       <section id='specials'>
-        <p className='section-title'>This weeks specials!</p>
+        <div className='specials-title'>
+          <p className='title'>This Weeks Specials</p>
+          <a href='/'><button>Online Menu</button></a>
+        </div>
         <div className='specials-content'>
           <div className='specials-content-card'>
             <img src={require('../../assets/images/img.JPG')} alt="Dish" />
