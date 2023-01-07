@@ -15,15 +15,15 @@ export default function Header() {
     <header>
       <div className={`hamburger ${open ? 'show-content' : 'hide-content'}`}>
         <div className="hamburger-content">
-          <span 
+          <span
             className="hamburger-content-exit"
             onClick={() => setOpen(false)}>{exitSvg}
           </span>
           <Nav />
         </div>
       </div>
-      <span 
-        className="hamburger-btn" 
+      <span
+        className="hamburger-btn"
         onClick={toggleHamburger}>{hamburgerSvg}
       </span>
       <div className="header">
@@ -45,9 +45,7 @@ export default function Header() {
             <a href="/">Reserve a table</a>
           </button>
         </div>
-        <div>
-          <img src={require('../../assets/images/img.JPG')} alt='Menu'/>
-        </div>
+          <img src={require('../../assets/images/main.JPG')} alt='Menu'/>
       </div>
     </header>
   )

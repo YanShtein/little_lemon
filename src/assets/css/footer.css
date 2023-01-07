@@ -1,5 +1,5 @@
 .footer {
-  color: var(--highlight-cream);
+  color: var(--hg-cream);
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -9,7 +9,7 @@
 }
 
 .footer img {
-  margin: auto 20px;
+  margin: 20px;
   width: 80px;
   height: 100px;
 }
@@ -21,11 +21,16 @@
 .footer p {
   font-size: 18px;
   font-weight: 500;
-  border-bottom: 1px solid var(--highlight-cream);
+  border-bottom: 1px solid var(--hg-cream);
 }
 
-.footer a,
 .footer li {
   font-size: 14px;
-  font-family: var(--font-paragraphs);
+  font-family: var(--family-p-a);
+}
+
+@media (max-width: 373px) {
+  .footer {
+    justify-content: space-between;
+  }
 }

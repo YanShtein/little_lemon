@@ -1,23 +1,41 @@
 @import url("https://fonts.googleapis.com/css2?family=Markazi+Text&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
 
+/*
+sbhd - sub heading, mb-mobile, hg - highlight
+*/
+
 :root {
   --primary-green: #495E57;
   --primary-yellow: #F4CE14;
   --secondary-orange: #EE9972;
   --secondary-cream: #FBDABB;
-  --highlight-cream: #EDEFEE;
-  --highlight-black: #333333;
-  --font-headlines: 'Markazi Text';
-  --font-paragraphs: 'Karla';
-  --section-title: 48px;
-  --section-title-weight: bold;
-  --card-title: 24px;
-  --card-title-weight: bold;
+  --hg-cream: #EDEFEE;
+  --hg-black: #333333;
+  --family-h2-h3: 'Markazi Text';
+  --family-p-a: 'Karla';
+  /*full*/
+  --h2-hd: 60px;
+  --h3-sbhd: 40px;
+  --par: 20px;
+  /*1024*/
+  --h2-hd-md: 40px;
+  --h3-sbhd-md: 30px;
+  --par-md: 20px;
+  /*751 mobile*/
+  --h2-hd-mb: 30px;
+  --h3-sbhd-mb: 20px;
+  --par-mb: 16px;
+  /*cards*/
+  --card-title: 26px;
   --card-price: 20px;
-  --card-line-height: 1.5px;
-  --par-text: 20px;
-  --border-radius: 6px;  
+  --card-p: 16px;
+  --card-a: 16px;
+  --color-par: var(--primary-green);
+  --card-bg: var(--hg-cream);
+  --card-color-border: var(--hg-cream);
+
+  --border-radius: 6px;
 }
 
 body {
@@ -35,27 +53,26 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  /* max-width: 1440px;
-  margin: auto; */
 }
 
 button {
   padding: 10px;
   margin: 10px auto;
   cursor: pointer;
-  font-family: var(--font-paragraphs);
-  color: var(--highlight-black);
+  font-family: var(--family-p-a);
+  color: var(--hg-black);
   font-weight: 600;
-  font-size: var(--font-paragraphs);
+  font-size: 16px;
   background-color: var(--primary-yellow);
   border-radius: var(--border-radius);
-  border: 1px solid var(--highlight-cream);
+  border: 1px solid var(--hg-cream);
+  width: max-content;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  font-family: var(--font-paragraphs);
+  font-family: var(--family-p-a);
 }
 
 li {
@@ -72,3 +89,14 @@ p {
   padding: 0;
 }
 
+.accesibility {
+  cursor: pointer;
+  position: fixed;
+  top: 90px;
+  left: 0px;
+}
+
+.accesibility img {
+  height: 45px;
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+}

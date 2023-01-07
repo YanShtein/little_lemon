@@ -1,13 +1,33 @@
+h3 {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+}
+
 main {
   max-width: 1130px;
   margin: auto;
 }
 
 #specials {
-  margin: 50px;
+  margin: 13px;
 }
 
-.specials-content {
+.specials-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.specials-heading p {
+  font-size: var(--par);
+  text-align: left;
+  font-family: var(--family-p-a);
+  font-weight: bold;
+}
+
+.specials-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,39 +36,31 @@ main {
   margin: 30px 0;
 }
 
-.specials-title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.title {
-  font-size: 24px;
-  text-align: left;
-  font-family: var(--font-paragraphs);
-}
-
-.specials-content-card {
+.card {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--highlight-cream);
+  border: 1px solid var(--hg-cream);
   height: 400px;
   width: 300px;
-  background-color: var(--highlight-cream);
+  background-color: var(--hg-cream);
   border-radius: var(--border-radius);
 }
 
-.specials-content-card img {
+.card img {
+  cursor: pointer;
   height: 60%;
   width: 100%;
   overflow: hidden;
   border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-  opacity: .8;
+  opacity: .7;
   object-fit: cover;
 }
 
-.specials-content-card div {
+.card img:hover {
+  opacity: 1;
+}
+
+.card-text {
   height: 40%;
   padding: 15px;
   display: flex;
@@ -56,37 +68,52 @@ main {
   justify-content: space-between;
 }
 
-.title-price {
+.card-text h3 {
   display: flex;
   width: 100%;
   justify-content: space-between;
   font-size: var(--card-title);
-  font-family: var(--font-headlines);
-  color: var(--highlight-black);
+  font-family: var(--family-h2-h3);
+  color: var(--hg-black);
 }
 
-.title-price span:nth-child(2) {
+.card h3 span:nth-child(2) {
   color: red;
+  font-size: var(--card-price);
 }
 
-.description {
-  font-size: var(--font-paragraphs);
+.card-text p {
+  font-family: var(--family-p-a);
+  font-size: var(--card-p);
   color: var(--primary-green);
 }
 
-.specials-content-card a {
-  color: var(--highlight-black);
+.card-text a {
+  color: var(--hg-black);
+  font-size: var(--card-a);
+  font-weight: 600;
 }
 
-.specials-content-card svg {
+.card-text svg {
   height: 20px;
   width: 20px;
   vertical-align: middle;
   margin-left: 10px;
 }
 
-@media (max-width: 682px) {
-  .specials-content {
-    gap: 20px;
+.card-text svg:hover {
+  animation: move 3s linear;
+}
+
+/* ---------------------> RATINGS ---------------------> */
+
+
+
+@keyframes move {
+  0% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(10px);
   }
 }
