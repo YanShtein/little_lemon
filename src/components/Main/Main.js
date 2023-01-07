@@ -1,5 +1,5 @@
-import '../../assets/css/shared.css';
-import '../../assets/css/main.css';
+import '../../assets/shared.css';
+import './main.css';
 import Ratings from './Ratings';
 import Specials from './Specials';
 

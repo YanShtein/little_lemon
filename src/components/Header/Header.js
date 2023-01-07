@@ -1,5 +1,5 @@
-import '../../assets/css/shared.css';
-import '../../assets/css/header.css';
+import '../../assets/shared.css';
+import './header.css';
 import Nav from "./Nav";
 import { exitSvg, hamburgerSvg } from '../../assets/svg';
 import { useState } from "react";
