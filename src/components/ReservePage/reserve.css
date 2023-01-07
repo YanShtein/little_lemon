@@ -1,0 +1,10 @@
+.reserve {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reserve-content {
+  
+}

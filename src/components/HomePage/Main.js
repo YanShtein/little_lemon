@@ -1,12 +1,15 @@
 import '../../assets/shared.css';
 import './main.css';
+import Article from './Article';
 import Ratings from './Ratings';
 import Specials from './Specials';
 
-export default function Main() {
-
+function Main() {
   return (
     <main>
+      <section id='article'>
+        <Article />
+      </section>
       <section id='specials'>
         <Specials />
       </section>
@@ -16,3 +19,9 @@ export default function Main() {
     </main>
   )
 }
+
+const HomePage = () => {
+  return <Main />
+};
+
+export default HomePage;

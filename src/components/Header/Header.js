@@ -3,6 +3,7 @@ import './header.css';
 import Nav from "./Nav";
 import { exitSvg, hamburgerSvg } from '../../assets/svg';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -27,25 +28,12 @@ export default function Header() {
         onClick={toggleHamburger}>{hamburgerSvg}
       </span>
       <div className="header">
-        <a href="/">
+        <Link to="/">
           <img src={require('../../assets/images/logo.png')} alt="Little Lemon Logo"/>
-        </a>
+        </Link>
         <span className="nav">
           <Nav />
         </span>
-      </div>
-      <div className="header-main">
-        <div className="header-main-content">
-          <h2>Little Lemon</h2>
-          <h3>Chicago</h3>
-          <p>We are a family mediterranean restaurant.
-            focused on traditional recipes, served with a modern twist.
-          </p>
-          <button>
-            <a href="/">Reserve a table</a>
-          </button>
-        </div>
-          <img src={require('../../assets/images/main.JPG')} alt='Menu'/>
       </div>
     </header>
   )
