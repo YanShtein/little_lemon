@@ -20,12 +20,14 @@ export default function Specials() {
                 <div className='card' key={special.id}>
                   <img src={require(`../../assets/images/${special.img}`)} alt={special.dish}/>
                   <div className='card-text'>
-                    <h3><span>{special.dish}</span><span>${special.price}</span></h3>
+                    <h3><span>{special.dishUpper}</span><span>${special.price}</span></h3>
                     <p>{special.description}</p>
                     <Link to='/order'>Order a delivery {deliverySvg}</Link>
                   </div>
                 </div>
               )
+            } else {
+              return '';
             }
           })
         }

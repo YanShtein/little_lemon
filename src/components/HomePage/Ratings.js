@@ -1,10 +1,7 @@
 import { starSvg } from '../../assets/svg';
-import { useContext } from "react";
-import { AppContext } from '../context/AppContext';
+import ratingsData from './ratingsData';
 
 export default function Ratings() {
-  const { ratingsData } = useContext(AppContext);
-
   return (
     <div className='ratings-content'>
       <p className='title'>What our customers say!</p>
