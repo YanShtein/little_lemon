@@ -3,7 +3,6 @@ import { AppContext } from '../context/AppContext';
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import './order.css';
-const shortid = require('shortid');
 
 export default function Order() {
   const { dishData, cart, dispatch } = useContext(AppContext);
@@ -16,11 +15,10 @@ export default function Order() {
       type: 'ADD_TO_CART',
       payload: item,
     })
-    
   };
 
   console.log(cart)
-  
+
   return (
     <>
       <Header />
