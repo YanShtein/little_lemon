@@ -102,12 +102,24 @@ p {
 }
 
 /* --------------> Input --------------> */
-.input-group {
-  position: relative;
+
+select {
+  width: 280px;
+  border: solid 1px var(--hg-black);
+  border-radius: 6px;
+  background: none;
+  padding: 14px;
+  font-size: 16px;
+  color: var(--primary-green);
+  margin: 8px auto;
 }
 
+.input-group {
+  position: relative;
+  margin: 8px auto;
+}
 
-input {
+.input-group input {
   width: 250px;
   border: solid 1px var(--hg-black);
   border-radius: 6px;
@@ -117,7 +129,7 @@ input {
   transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-label {
+.input-group label {
   position: absolute;
   left: 16px;
   color: var(--primary-green);
@@ -126,14 +138,14 @@ label {
   transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input:focus {
+.input-group input:focus {
   outline: none;
   color: var(--primary-green);
   border: 1px solid var(--primary-yellow);
 }
 
 /* If input focused */
-input:focus ~ label {
+.input-group input:focus ~ label {
   transform: translateY(-50%) scale(0.8);
   background-color: white;
   padding: 0 3px;
@@ -141,7 +153,7 @@ input:focus ~ label {
 }
 
 /* If value not empty and input not in focus */
-input:not([value=""]):not(:focus) ~ label {
+.input-group input:not([value=""]):not(:focus) ~ label {
   transform: translateY(-50%) scale(0.8);
   background-color: white;
   padding: 0 3px;

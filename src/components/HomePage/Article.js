@@ -10,7 +10,7 @@ export default function Article() {
           focused on traditional recipes, served with a modern twist.
         </p>
         <button>
-          <Link to="/reserve">Reserve a table</Link>
+          <Link to="/book">Reserve a table</Link>
         </button>
       </div>
       <img src={require('../../assets/images/main.JPG')} alt='Menu'/>
