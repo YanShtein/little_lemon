@@ -8,7 +8,7 @@ const AppReducer = (state, action) => {
       if (inCart) {
         return {
           ...state,
-          cart: state.cart.map(item => 
+          cart: state.cart.map(item =>
             item.id === action.payload.id ? {...item, quantity: item.quantity + 1} : item
           )
         };
@@ -32,7 +32,6 @@ export const AppProvider = ({ children }) => {
     <AppContext.Provider value={{
       cart: state.cart,
       dishData: state.dishData,
-      customerDetails: state.customerDetails,
       dispatch
     }}>
       {children}

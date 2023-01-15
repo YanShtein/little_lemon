@@ -56,7 +56,6 @@ const initialState = {
     },
   ],
   cart: [],
-  customerDetails: [],
 };
 
 export default initialState;

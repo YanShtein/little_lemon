@@ -19,19 +19,6 @@
   font-weight: 500;
 }
 
-.reserve-date input:focus-visible {
-  outline: none;
-  border: 2px solid #e2ddb0;
-}
-
-.react-datepicker-wrapper {
-  width: auto !important;
-}
-
-.react-datepicker {
-  transform: scale(0.9);
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -62,8 +49,8 @@ svg {
   vertical-align: middle;
 }
 
-.error {
-  border: 1px solid red;
-  border-radius: 6px;
-  margin: 15px;
+@media (max-width: 430px) {
+  .reserve {
+    max-width: 300px;
+  }
 }
