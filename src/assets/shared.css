@@ -71,6 +71,11 @@ button {
 
 button:hover {
   background-color: var(--hg-cream);
+  border: 1px solid var(--primary-green);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 a {

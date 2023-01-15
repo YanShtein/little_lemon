@@ -16,8 +16,10 @@
 }
 
 .search input {
-  height: 25px;
-  width: 300px;
+  height: 35px;
+  width: 220px;
+  font-size: inherit;
+  padding: 0px 8px;
 }
 
 .menu-items {
@@ -53,11 +55,41 @@
 }
 
 .order-details {
+  margin: 40px auto;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .order-details div {
   margin: 10px auto;
+}
+
+.order-items {
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  width: 200px;
+  margin: auto;
+}
+
+.order-item {
+  display: flex; 
+  justify-content: space-between;
+}
+
+.total {
+  margin: 10px auto;
+  font-weight: bold;
+}
+
+.order-details button {
+  width: 100%;
+}
+
+.submitted {
+  margin: 100px auto;
+  text-align: center;
 }

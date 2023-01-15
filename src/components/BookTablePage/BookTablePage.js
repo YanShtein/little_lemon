@@ -12,7 +12,7 @@ export default function BookTablePage() {
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [time, setTime] = useState('');
   const [occasion, setOccasion] = useState('');
-  const [people, setPeople] = useState('2');
+  const [guests, setGuests] = useState('2');
   const [submitted, setSubmitted] = useState(false);
 
   function onSubmit(e) {
@@ -49,7 +49,7 @@ export default function BookTablePage() {
             firstName={firstName}
             lastName={lastName}
             phone={phone}
-            people={people}
+            guests={guests}
             occasion={occasion}
             date={date}
             time={time}
@@ -78,19 +78,19 @@ export default function BookTablePage() {
               }
             </select>
           </div>
-          <small>*Max 10 people per table</small>
-          <select name="people" value={people} onChange={e => setPeople(e.target.value)} required>
-            <option value="12:00">2 People</option>
+          <small>*Max 10 guests per table</small>
+          <select name="guests" value={guests} onChange={e => setGuests(e.target.value)} required>
+            <option value="12:00">2 guests</option>
             <option value="1">1 Person</option>
-            <option value="2">2 People</option>
-            <option value="3">3 People</option>
-            <option value="4">4 People</option>
-            <option value="5">5 People</option>
-            <option value="6">6 People</option>
-            <option value="7">7 People</option>
-            <option value="8">8 People</option>
-            <option value="9">9 People</option>
-            <option value="10">10 People</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+            <option value="5">5 guests</option>
+            <option value="6">6 guests</option>
+            <option value="7">7 guests</option>
+            <option value="8">8 guests</option>
+            <option value="9">9 guests</option>
+            <option value="10">10 guests</option>
           </select>
           <div className="input-group">
             <input

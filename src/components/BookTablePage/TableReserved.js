@@ -4,7 +4,7 @@ export default function TableReserved({
   firstName,
   lastName,
   phone,
-  people,
+  guests,
   occasion,
   email,
   date,
@@ -43,7 +43,7 @@ export default function TableReserved({
           <li>{phone}</li>
           <li>{date}</li>
           <li>{time}</li>
-          <li>{people}</li>
+          <li>{guests}</li>
           <li>{occasion ? occasion : 'General'} {occasionSvg}</li>
         </ul>
       </div>
