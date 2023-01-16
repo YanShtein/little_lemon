@@ -31,7 +31,7 @@ export const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider value={{
       cart: state.cart,
-      dishData: state.dishData,
+      menuData: state.menuData,
       dispatch
     }}>
       {children}

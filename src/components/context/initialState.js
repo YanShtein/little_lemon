@@ -1,5 +1,5 @@
 const initialState = {
-  dishData: [
+  menuData: [
     {
       id: 1,
       img: 'cheeseBread.JPG',

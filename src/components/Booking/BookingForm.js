@@ -1,5 +1,4 @@
-
-export default function BookingForm({ 
+export default function BookingForm({
   onSubmit,
   setDate,
   setTime,
@@ -10,10 +9,10 @@ export default function BookingForm({
   setPhone,
   setOccasion,
   date,
-  times_state,
+  availableTimes,
   dispatch
 }) {
-  
+
   // splitting the date to get the day [2030-02-*20*], then based on the day -> return the available times.
   function handleDateReducer() {
     dispatch({
@@ -39,7 +38,7 @@ export default function BookingForm({
         <select name="time" onChange={e => setTime(e.target.value)} required>
           <option label="Select time" value="">Select time</option>
           {
-            times_state.map(item => {
+            availableTimes.map(item => {
               return (
                 <option value={item} key={item}>{item}</option>
               )
@@ -98,10 +97,10 @@ export default function BookingForm({
         />
         <label>Phone Number e.g 123456789</label>
       </div>
-      <select 
-        placeholder='Select an occasion' 
-        style={{width: '280px'}} 
-        name="occasion" 
+      <select
+        placeholder='Select an occasion'
+        style={{width: '280px'}}
+        name="occasion"
         onChange={e => setOccasion(e.target.value)}>
         <option label="Select an occasion (optional)" value="">Select an occasion (optional)</option>
         <option label="Birthday" value="Birthday">Birthday</option>

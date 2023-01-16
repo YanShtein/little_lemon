@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AppContext } from '../context/AppContext';
 
 export default function Specials() {
-  const { dishData } = useContext(AppContext);
+  const { menuData } = useContext(AppContext);
 
   return (
     <>
@@ -14,7 +14,7 @@ export default function Specials() {
       </div>
       <div className='specials-grid'>
         {
-          dishData.map(special => {
+          menuData.map(special => {
             if (special.id === 1 || special.id === 2 || special.id === 3) {
               return (
                 <div className='card' key={special.id}>

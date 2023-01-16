@@ -1,6 +1,6 @@
 import { birthdaySvg, anniversarySvg, businessSvg, generalSvg } from "../../assets/svg";
 
-export default function TableReserved({
+export default function Confirmation({
   firstName,
   lastName,
   phone,

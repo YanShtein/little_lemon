@@ -5,7 +5,7 @@ import { AppContext } from '../context/AppContext';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
-export default function Menu() {
+export default function MenuPage() {
   const { dishData } = useContext(AppContext);
 
   return (

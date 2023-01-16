@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 import Header from "../Header/Header";
 import BookingForm from "./BookingForm";
-import TableReserved from "./TableReserved";
+import Confirmation from "./Confirmation";
 import '../../assets/shared.css';
 import './book.css';
 
@@ -21,7 +21,7 @@ export default function BookingPage() {
     '20:00', '21:00', '22:00',
   ];
 
-  const updateTimes = (times_state, action) => {
+  const updateTimes = (availableTimes, action) => {
     switch (action.type) {
       case '01': case '03': case '05': case '07': case '09': case '11': case '13':
       case '15': case '17': case '19': case '21': case '23': case '25':
@@ -36,7 +36,7 @@ export default function BookingPage() {
     };
   };
 
-  const [times_state, dispatch] = useReducer(updateTimes, initializeTimes);
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes);
 
   function onSubmit(e) {
     e.preventDefault();
@@ -49,7 +49,7 @@ export default function BookingPage() {
       <div className="reserve">
         {
           submitted ?
-          <TableReserved
+          <Confirmation
           {...{
             firstName,
             lastName,
@@ -64,22 +64,22 @@ export default function BookingPage() {
           :
           <BookingForm
             {...{
-              onSubmit, 
-              setDate, 
+              onSubmit,
+              setDate,
               date,
-              setFirstName, 
-              setLastName, 
+              setFirstName,
+              setLastName,
               setEmail,
               setPhone,
-              times_state, 
-              setTime, 
-              setOccasion, 
+              availableTimes,
+              setTime,
+              setOccasion,
               setGuests,
               dispatch,
             }}
           />
         }
-      </div>  
-    </>  
+      </div>
+    </>
   )
 };
