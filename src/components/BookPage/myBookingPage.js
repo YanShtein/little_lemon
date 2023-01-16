@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import { useState } from 'react';
 import TableReserved from './TableReserved';
 
-export default function BookTablePage() {
+export default function BookingPage() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -57,7 +57,7 @@ export default function BookTablePage() {
           />
           :
         <form onSubmit={e => onSubmit(e)}>
-          <h2>Reserve a table</h2>
+          <h2>Book A table</h2>
           <p>Choose date and time:</p>
           <div className='date-time'>
             <input

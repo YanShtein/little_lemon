@@ -132,6 +132,10 @@ input[type="date"] {
   margin-right: 10px;
 }
 
+::placeholder {
+  color: #d0d0d0;
+}
+
 .input-group {
   position: relative;
   margin: 8px auto;

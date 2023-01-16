@@ -9,9 +9,7 @@ export default function Article() {
         <p>We are a family mediterranean restaurant.
           focused on traditional recipes, served with a modern twist.
         </p>
-        <button>
-          <Link to="/book">Reserve a table</Link>
-        </button>
+        <Link to="/book"><button>Book a table</button></Link>
       </div>
       <img src={require('../../assets/images/main.JPG')} alt='Menu'/>
     </div>

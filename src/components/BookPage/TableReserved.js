@@ -49,7 +49,7 @@ export default function TableReserved({
       </div>
       <p>Order details has been sent to: <i>{email}</i></p>
       <br/>
-      <button><a href="/book">Go Back</a></button>
+      <a href="/book"><button>Go Back</button></a>
     </>
   )
 };
