@@ -2,7 +2,7 @@ import HomePage from "./components/Home/HomePage";
 import BookingPage from "./components/Booking/BookingPage";
 import OrderPage from "./components/Order/OrderPage";
 import { Routes, Route } from "react-router-dom";
-import MenuPage from "./components/MenuPage/MenuPage";
+import MenuPage from "./components/Menu/MenuPage";
 // import './assets/shared.css';
 
 function App() {

@@ -2,10 +2,10 @@ import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 const useSearch = ({ search }) => {
-  const { dishData } = useContext(AppContext);
+  const { menuData } = useContext(AppContext);
 
   function handleSearch() {
-    let filteredItems = dishData.filter(item => {
+    let filteredItems = menuData.filter(item => {
       if (search === '') {
         return item;
       } else {

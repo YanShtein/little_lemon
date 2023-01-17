@@ -52,7 +52,7 @@ export default function OrderPage() {
                     <div className="search-item" key={item.id}>
                       <button onClick={() => handleAddToCart(item)}>+</button>
                       <img src={require(`../../assets/images/${item.img}`)} alt={item.dishUpper} />
-                      <p>{item.dishUpper}</p>
+                      <p>{item.dishLower}</p>
                       <p>${item.price}</p>
                     </div>
                   )

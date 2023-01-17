@@ -6,7 +6,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 export default function MenuPage() {
-  const { dishData } = useContext(AppContext);
+  const { menuData } = useContext(AppContext);
 
   return (
     <>
@@ -15,7 +15,7 @@ export default function MenuPage() {
         <h2>Little Lemon menu</h2>
         <div className='menu-content'>
           {
-            dishData.map(item => {
+            menuData.map(item => {
               return (
                 <div className='menu-content-item' key={item.id}>
                   <img src={require(`../../assets/images/${item.img}`)} alt={item.dishUpper}/>
