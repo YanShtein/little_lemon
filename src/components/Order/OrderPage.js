@@ -30,7 +30,7 @@ export default function OrderPage() {
     <>
       <Header />
       <div className="order">
-        <h2>Order Online</h2>
+        <h2>ORDER ONLINE</h2>
         {
           submitted ?
           <div className="submitted">

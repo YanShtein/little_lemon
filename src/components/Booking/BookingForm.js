@@ -13,16 +13,16 @@ export default function BookingForm({
   dispatch
 }) {
 
-  // splitting the date to get the day [2030-02-*20*], then based on the day -> return the available times.
   function handleDateReducer() {
     dispatch({
-      type: date.split('-')[2],
+      type: 'date',
+      payload: new Date(date),
     })
   };
 
   return (
     <form onSubmit={e => onSubmit(e)}>
-      <h2>Book A table</h2>
+      <h2>BOOK A TABLE</h2>
       <p>Choose date and time:</p>
       <div className='date-time'>
         <input
