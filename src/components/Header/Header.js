@@ -1,6 +1,6 @@
 import '../../assets/shared.css';
 import './header.css';
-import Nav from "./Nav";
+import Nav from "../Nav";
 import { exitSvg, hamburgerSvg } from '../../assets/svg';
 import { useState } from "react";
 import { Link } from "react-router-dom";

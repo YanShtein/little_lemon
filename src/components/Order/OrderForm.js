@@ -8,7 +8,7 @@ export default function OrderForm({ onSubmit }) {
 
   return (
     <form onSubmit={e => onSubmit(e)}>
-      <h3>Order details</h3>
+      <p>Order details</p>
       <div className="input-group">
         <input value={name} onChange={e => setName(e.target.value)} required/>
         <label>Name</label>

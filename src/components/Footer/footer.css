@@ -1,6 +1,5 @@
 .footer {
   color: var(--hg-cream);
-  margin-top: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,6 +25,7 @@
 .footer li {
   font-size: 14px;
   font-family: var(--family-p-a);
+  height: 20px;
 }
 
 @media (max-width: 373px) {

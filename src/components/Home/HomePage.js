@@ -5,6 +5,7 @@ import Ratings from './Ratings';
 import Specials from './Specials';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import About from './About';
 
 export default function HomePage() {
   return (
@@ -19,6 +20,9 @@ export default function HomePage() {
         </section>
         <section id='ratings'>
           <Ratings />
+        </section>
+        <section id='about'>
+          <About />
         </section>
       </main>
       <Footer />

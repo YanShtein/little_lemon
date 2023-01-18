@@ -1,6 +1,6 @@
 import '../../assets/shared.css';
 import './footer.css';
-import { Link } from "react-router-dom";
+import Nav from '../Nav';
 
 export default function Footer() {
   return (
@@ -9,13 +9,7 @@ export default function Footer() {
         <img src={require('../../assets/images/footer.JPG')} alt="Lemon" />
         <section>
           <p>Doormat Navigation</p>
-          <ul>
-            <li><Link to='/'>Home</Link></li>
-            <li><Link to='#about'>About</Link></li>
-            <li><Link to='/menu'>Menu</Link></li>
-            <li><Link to='/book'>Book Table</Link></li>
-            <li><Link to='/order'>Order Online</Link></li>
-          </ul>
+          <Nav />
         </section>
         <section>
           <p>Contact</p>

@@ -45,7 +45,7 @@ export default function BookingPage() {
 
   return (
     <>
-    <Header />
+      <Header />
       <div className="reserve">
         {
           submitted ?
