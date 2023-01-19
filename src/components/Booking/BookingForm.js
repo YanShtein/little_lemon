@@ -1,16 +1,7 @@
 export default function BookingForm({
-  onSubmit,
-  setDate,
-  setTime,
-  setGuests,
-  setFirstName,
-  setLastName,
-  setEmail,
-  setPhone,
-  setOccasion,
-  date,
-  availableTimes,
-  dispatch
+  submitForm, setDate, setTime, setGuests, setFirstName, setLastName, setEmail,
+  setPhone, setOccasion, availableTimes, dispatch,
+  firstName, lastName, phone, guests, occasion, email, date, time,
 }) {
 
   function handleDateReducer() {
@@ -20,8 +11,10 @@ export default function BookingForm({
     })
   };
 
+  let formData = {firstName, lastName, phone, guests, occasion, email, date, time};
+
   return (
-    <form onSubmit={e => onSubmit(e)}>
+    <form onSubmit={e => submitForm(e, formData)}>
       <h2>BOOK A TABLE</h2>
       <p>Choose date and time:</p>
       <div className='date-time'>
@@ -35,7 +28,7 @@ export default function BookingForm({
           }}
           min="2023-01-15" max="2023-02-28"
           required/>
-        <select name="time" onChange={e => setTime(e.target.value)} required>
+        <select name="time" value={time} onChange={e => setTime(e.target.value)} required>
           <option label="Select time" value="">Select time</option>
           {
             availableTimes.map(item => {
@@ -47,7 +40,7 @@ export default function BookingForm({
         </select>
       </div>
       <small>*Max 10 guests per table</small>
-      <select name="guests" onChange={e => setGuests(e.target.value)} required>
+      <select name="guests" value={guests} onChange={e => setGuests(e.target.value)} required>
         <option value="12:00">2 guests</option>
         <option value="1">1 Person</option>
         <option value="2">2 guests</option>
@@ -63,7 +56,7 @@ export default function BookingForm({
       <div className="input-group">
         <input
           type='text'
-          placeholder="Enter First Name"
+          value={firstName}
           onChange={e => setFirstName(e.target.value)}
           required
         />
@@ -72,7 +65,7 @@ export default function BookingForm({
       <div className="input-group">
         <input
           type='text'
-          placeholder="Enter Last Name"
+          value={lastName}
           onChange={e => setLastName(e.target.value)}
           required
         />
@@ -81,7 +74,7 @@ export default function BookingForm({
       <div className="input-group">
         <input
           type='email'
-          placeholder="Enter Email"
+          value={email}
           onChange={e => setEmail(e.target.value)}
           required
         />
@@ -90,7 +83,7 @@ export default function BookingForm({
       <div className="input-group">
         <input
           type='tel'
-          placeholder="Enter Phone number"
+          value={phone}
           onChange={e => setPhone(e.target.value)}
           minLength="1" maxLength="10" pattern="\d[0-9]+"
           required
@@ -101,6 +94,7 @@ export default function BookingForm({
         placeholder='Select an occasion'
         style={{width: '280px'}}
         name="occasion"
+        value={occasion}
         onChange={e => setOccasion(e.target.value)}>
         <option label="Select an occasion (optional)" value="">Select an occasion (optional)</option>
         <option label="Birthday" value="Birthday">Birthday</option>

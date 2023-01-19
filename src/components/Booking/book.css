@@ -3,12 +3,16 @@ h2 {
 }
 
 .reserve {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 30px auto;
+  margin: 80px auto;
+}
+
+.reserve p {
+  width: 300px;
+  text-align: center;
 }
 
 .reserve-date input {
