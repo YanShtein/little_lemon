@@ -20,12 +20,6 @@ const updateTimes = (availableTimes, action) => {
   };
 };
 
-// In the assignment we were asked to manage states from Main component,
-// after few changes I have made to be, as close to best practices as possible,
-// I decided to leave props as it is now (passed to BookingForm).
-// although I could have maybe pass it all through Context, or manage states directly,
-// through the BookingForm component.
-
 export default function BookingPage() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -35,17 +29,29 @@ export default function BookingPage() {
   const [time, setTime] = useState('');
   const [occasion, setOccasion] = useState('');
   const [guests, setGuests] = useState('2');
-  const { submitForm } = useSubmitForm();
+  const { submitForm } = useSubmitForm({
+    date, firstName, lastName, email, phone, time, occasion, guests
+  });
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
- 
+
   return (
     <>
       <Header />
       <div className="reserve">
         <BookingForm
-          {...{submitForm, setDate, setFirstName, setLastName, setEmail, setPhone, setTime,
-            setOccasion, setGuests, availableTimes, dispatch,
-            date, firstName, lastName, email, phone, time, occasion, guests,
+          {...{
+            submitForm,
+            setDate,
+            setFirstName,
+            setLastName,
+            setEmail,
+            setPhone,
+            setTime,
+            setOccasion,
+            setGuests,
+            availableTimes,
+            dispatch,
+            date
           }}
         />
       </div>

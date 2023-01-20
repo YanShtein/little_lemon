@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 
 export default function Confirmation() {
   const { state } = useLocation();
-  const { firstName, lastName, occasion, phone, date, time, guests, email } = state.formData;
+  const { date, firstName, lastName, email, phone, time, occasion, guests } = state;
 
   const occasionSvg = (
     occasion === 'Birthday' ? birthdaySvg :
