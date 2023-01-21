@@ -13,14 +13,16 @@ const useSubmitForm = () => {
     }
   };
 
+  const { date, time, reserveNumber } = {...bookingForm};
+
   useEffect(() => {
     if (bookingForm) {
-      localStorage.setItem('TableReservation', JSON.stringify(bookingForm.date, bookingForm.time));
+      localStorage.setItem('TableReservation', JSON.stringify({'date': date, 'time': time, 'reservation': reserveNumber}));
       navigate('/confirmation', {state: {
         ...bookingForm
       }});
     }
-  }, [bookingForm]);
+  });
 
   return { submitForm };
 };

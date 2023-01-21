@@ -9,6 +9,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
   const [time, setTime] = useState('');
   const [occasion, setOccasion] = useState('');
   const [guests, setGuests] = useState('2');
+  const [reserveNumber, setReserveNumber] = useState(Math.floor(Math.random() * 1000));
 
   function handleDateReducer() {
     dispatch({
@@ -27,6 +28,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         time: time,
         occasion: occasion,
         guests: guests,
+        reserveNumber: reserveNumber,
       }
       })}>
       <h2>BOOK A TABLE</h2>

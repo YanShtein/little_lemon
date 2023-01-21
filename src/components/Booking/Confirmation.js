@@ -6,7 +6,7 @@ import Header from "../Header/Header";
 
 export default function Confirmation() {
   const { state } = useLocation();
-  const { date, firstName, lastName, email, phone, time, occasion, guests } = state;
+  const { date, firstName, lastName, email, phone, time, occasion, guests, reserveNumber } = state;
 
   const occasionSvg = (
     occasion === 'Birthday' ? birthdaySvg :
@@ -37,7 +37,7 @@ export default function Confirmation() {
             <li>Occasion:</li>
           </ul>
           <ul>
-            <li><b>000-{Math.floor(Math.random() * 100)}-157</b></li>
+            <li><b>000-{reserveNumber}-157</b></li>
             <li>{upperCase(firstName)} {upperCase(lastName)}</li>
             <li>{phone}</li>
             <li>{date}</li>
@@ -46,7 +46,7 @@ export default function Confirmation() {
             <li>{occasion ? occasion : 'General'} {occasionSvg}</li>
           </ul>
         </div>
-        <p>Order details has been sent to: <i>{email}</i></p>
+        <p>Order details has been sent to: <b><i>{email}</i></b></p>
         <br/>
         <a href="/book"><button>Go Back</button></a>
       </div>
