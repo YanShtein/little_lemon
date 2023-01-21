@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 import Header from "../Header/Header";
 import BookingForm from "./BookingForm";
 import { fetchAPI } from "./bookingAPI";
@@ -21,17 +21,7 @@ const updateTimes = (availableTimes, action) => {
 };
 
 export default function BookingPage() {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [date, setDate] = useState(new Date().toISOString().slice(0, 10)); // full date to match input type date.
-  const [time, setTime] = useState('');
-  const [occasion, setOccasion] = useState('');
-  const [guests, setGuests] = useState('2');
-  const { submitForm } = useSubmitForm({
-    date, firstName, lastName, email, phone, time, occasion, guests
-  });
+  const { submitForm } = useSubmitForm();
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
@@ -41,17 +31,8 @@ export default function BookingPage() {
         <BookingForm
           {...{
             submitForm,
-            setDate,
-            setFirstName,
-            setLastName,
-            setEmail,
-            setPhone,
-            setTime,
-            setOccasion,
-            setGuests,
             availableTimes,
             dispatch,
-            date
           }}
         />
       </div>

@@ -1,28 +1,48 @@
-export default function BookingForm({dispatch, availableTimes, submitForm, ...form}) {
+import { useState } from "react";
+
+export default function BookingForm({ dispatch, availableTimes, submitForm }) {
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [date, setDate] = useState(new Date().toISOString().slice(0, 10)); // full date to match input type date.
+  const [time, setTime] = useState('');
+  const [occasion, setOccasion] = useState('');
+  const [guests, setGuests] = useState('2');
 
   function handleDateReducer() {
     dispatch({
       type: 'date',
-      payload: new Date(form.date),
+      payload: new Date(date),
     })
   };
 
   return (
-    <form onSubmit={e => submitForm(e, {formData: true})}>
+    <form onSubmit={e => submitForm(e, {formData: {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phone: phone,
+        date: date,
+        time: time,
+        occasion: occasion,
+        guests: guests,
+      }
+      })}>
       <h2>BOOK A TABLE</h2>
       <p>Choose date and time:</p>
       <div className='date-time'>
         <input
           type="date"
           id="date"
-          value={form.date}
+          value={date}
           onChange={e => {
-            form.setDate(e.target.value);
+            setDate(e.target.value);
             handleDateReducer();
           }}
           min="2023-01-15" max="2023-02-28"
           required/>
-        <select name="time" onChange={e => form.setTime(e.target.value)} required>
+        <select name="time" value={time} onChange={e => setTime(e.target.value)} required>
           <option label="Select time" value="">Select time</option>
           {
             availableTimes.map(item => {
@@ -34,7 +54,7 @@ export default function BookingForm({dispatch, availableTimes, submitForm, ...fo
         </select>
       </div>
       <small>*Max 10 guests per table</small>
-      <select name="guests" onChange={e => form.setGuests(e.target.value)} required>
+      <select name="guests" value={guests} onChange={e => setGuests(e.target.value)} required>
         <option value="12:00">2 guests</option>
         <option value="1">1 Person</option>
         <option value="2">2 guests</option>
@@ -50,7 +70,9 @@ export default function BookingForm({dispatch, availableTimes, submitForm, ...fo
       <div className="input-group">
         <input
           type='text'
-          onChange={e => form.setFirstName(e.target.value)}
+          name="firstName"
+          value={firstName}
+          onChange={e => setFirstName(e.target.value)}
           required
         />
         <label htmlFor="firstName">First Name</label>
@@ -58,7 +80,9 @@ export default function BookingForm({dispatch, availableTimes, submitForm, ...fo
       <div className="input-group">
         <input
           type='text'
-          onChange={e => form.setLastName(e.target.value)}
+          name="lastName"
+          value={lastName}
+          onChange={e => setLastName(e.target.value)}
           required
         />
         <label>Last Name</label>
@@ -66,7 +90,9 @@ export default function BookingForm({dispatch, availableTimes, submitForm, ...fo
       <div className="input-group">
         <input
           type='email'
-          onChange={e => form.setEmail(e.target.value)}
+          name="email"
+          value={email}
+          onChange={e => setEmail(e.target.value)}
           required
         />
         <label>Email</label>
@@ -74,7 +100,9 @@ export default function BookingForm({dispatch, availableTimes, submitForm, ...fo
       <div className="input-group">
         <input
           type='tel'
-          onChange={e => form.setPhone(e.target.value)}
+          name="phone"
+          value={phone}
+          onChange={e => setPhone(e.target.value)}
           minLength="1" maxLength="10" pattern="\d[0-9]+"
           required
         />
@@ -84,7 +112,8 @@ export default function BookingForm({dispatch, availableTimes, submitForm, ...fo
         placeholder='Select an occasion'
         style={{width: '280px'}}
         name="occasion"
-        onChange={e => form.setOccasion(e.target.value)}>
+        value={occasion}
+        onChange={e => setOccasion(e.target.value)}>
         <option label="Select an occasion (optional)" value="">Select an occasion (optional)</option>
         <option label="Birthday" value="Birthday">Birthday</option>
         <option label="Anniversary" value="Anniversary">Anniversary</option>

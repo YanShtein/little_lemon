@@ -10,12 +10,17 @@ export default function OrderForm({ onSubmit }) {
     <form onSubmit={e => onSubmit(e)}>
       <p>Order details</p>
       <div className="input-group">
-        <input value={name} onChange={e => setName(e.target.value)} required/>
+        <input
+          name="name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+          required/>
         <label>Name</label>
       </div>
       <div className="input-group">
         <input
           type='tel'
+          name="phone"
           minLength="1" maxLength="10" pattern="\d[0-9]+"
           value={phone}
           onChange={e => setPhone(e.target.value)}
@@ -24,6 +29,7 @@ export default function OrderForm({ onSubmit }) {
       </div>
       <div className="input-group">
         <input
+          name="email"
           value={email}
           onChange={e => setEmail(e.target.value)}
           required/>
@@ -31,6 +37,7 @@ export default function OrderForm({ onSubmit }) {
       </div>
       <div className="input-group">
         <input
+          name="address"
           value={address}
           onChange={e => setAddress(e.target.value)}
           required/>
