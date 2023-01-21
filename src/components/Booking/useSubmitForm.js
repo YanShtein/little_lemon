@@ -17,7 +17,7 @@ const useSubmitForm = () => {
 
   useEffect(() => {
     if (bookingForm) {
-      localStorage.setItem('TableReservation', JSON.stringify({'date': date, 'time': time, 'reservation': reserveNumber}));
+      localStorage.setItem('Little_Lemon-Table', JSON.stringify({'date': date, 'time': time, 'reservation': reserveNumber}));
       navigate('/confirmation', {state: {
         ...bookingForm
       }});

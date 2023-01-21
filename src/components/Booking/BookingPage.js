@@ -40,4 +40,4 @@ export default function BookingPage() {
   )
 };
 
-export { updateTimes, initializeTimes };
+export { updateTimes, initializeTimes, useSubmitForm };

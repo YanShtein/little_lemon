@@ -37,7 +37,7 @@ export default function Confirmation() {
             <li>Occasion:</li>
           </ul>
           <ul>
-            <li><b>000-{reserveNumber}-157</b></li>
+            <li><b>000-{reserveNumber}-123</b></li>
             <li>{upperCase(firstName)} {upperCase(lastName)}</li>
             <li>{phone}</li>
             <li>{date}</li>
