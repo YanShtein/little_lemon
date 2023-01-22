@@ -10,7 +10,7 @@ export default function Specials() {
     <>
       <div className='specials-heading'>
         <p>This Weeks Specials</p>
-        <Link to='/menu'><button>Online Menu</button></Link>
+        <Link to='/menu'><button aria-label="On Click go to Online menu page">Online Menu</button></Link>
       </div>
       <div className='specials-grid'>
         {
@@ -22,7 +22,7 @@ export default function Specials() {
                   <div className='card-text'>
                     <h3><span>{special.dishUpper}</span><span>${special.price}</span></h3>
                     <p>{special.description}</p>
-                    <Link to='/order'>Order a delivery {deliverySvg}</Link>
+                    <Link to='/order' aria-label="On Click go to Order page">Order a delivery {deliverySvg}</Link>
                   </div>
                 </div>
               )

@@ -1,39 +1,79 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { validateEmail, validatePhone } from "../Booking/fieldsValidation";
+import { AppContext } from "../context/AppContext";
+
 
 export default function OrderForm({ onSubmit }) {
+  const { cart } = useContext(AppContext);
   const [address, setAddress] = useState('');
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [name, setName] = useState({ val: '', error: false });
+  const [email, setEmail] = useState({ val: '', error: false });
+  const [phone, setPhone] = useState({ val: '', error: false });
+
+  function handlePhoneBlur() {
+    if (validatePhone(phone.val)) {
+      setPhone({...phone, error: false})
+    } else {
+      setPhone({...phone, error: true})
+    }
+  };
+
+  function handleEmailBlur() {
+    if (validateEmail(email.val)) {
+      setEmail({...email, error: false})
+    } else {
+      setEmail({...email, error: true})
+    }
+  };
+
+  function handleNameBlur() {
+    const textRegex = /[a-zA-Z]{3,15}$/;
+    if (textRegex.test(name.val)) {
+      setName({...name, error: false})
+    } else {
+      setName({...name, error: true})
+    }
+  };
 
   return (
     <form onSubmit={e => onSubmit(e)}>
       <p>Order details</p>
       <div className="input-group">
         <input
+          type='text'
           name="name"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          required/>
-        <label>Name</label>
+          maxLength="15"
+          value={name.val}
+          onChange={e => setName({...name, val: e.target.value})}
+          onBlur={handleNameBlur}
+          required
+        />
+        <label aria-label="name" htmlFor="name">First Name</label>
+        {name.error && <small>Please enter a valid text.</small>}
       </div>
       <div className="input-group">
         <input
           type='tel'
           name="phone"
-          minLength="1" maxLength="10" pattern="\d[0-9]+"
-          value={phone}
-          onChange={e => setPhone(e.target.value)}
+          value={phone.val}
+          onChange={e => setPhone({...email, val: e.target.value})}
+          onBlur={handlePhoneBlur}
+          minLength="9" maxLength="12"
           required/>
-        <label>Phone Number e.g 123456789</label>
+        <label aria-label="phone" htmlFor="phone">Phone Number e.g 012-3456789</label>
+        {phone.error && <small>Min 10 chars for phone number 0-9.</small>}
       </div>
       <div className="input-group">
         <input
+          type='email'
           name="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          required/>
-        <label>Email Address</label>
+          value={email.val}
+          onChange={e => setEmail({...email, val: e.target.value})}
+          onBlur={handleEmailBlur}
+          required
+        />
+        <label aria-label="email" htmlFor="email">Email</label>
+        {email.error && <small>Please enter a valid email address.</small>}
       </div>
       <div className="input-group">
         <input
@@ -43,7 +83,7 @@ export default function OrderForm({ onSubmit }) {
           required/>
         <label>Delivery Address</label>
       </div>
-      <button type="submit">CHECKOUT</button>
+      <button aria-label="Submit Order" disabled={cart.length === 0} type="submit">CHECKOUT</button>
     </form>
   )
 };

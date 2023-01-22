@@ -90,6 +90,15 @@
   justify-content: space-between;
 }
 
+.cart-empty {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-green);
+  width: 100%;
+  border-bottom: 1px solid var(--primary-green);
+}
+
 .total {
   margin: 10px auto;
   font-weight: bold;

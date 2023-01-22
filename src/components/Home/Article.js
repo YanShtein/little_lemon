@@ -13,7 +13,7 @@ export default function Article() {
           Whether you're in the mood for a casual lunch or a romantic dinner,<br />
           Little Lemon has something to satisfy your cravings.
         </p>
-        <Link to="/book"><button>Book a Table</button></Link>
+        <Link to="/book"><button aria-label="On Click go to book a table page">Book a Table</button></Link>
       </div>
     </div>
   )

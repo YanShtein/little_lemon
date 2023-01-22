@@ -35,7 +35,7 @@ export default function OrderPage() {
           submitted ?
           <div className="submitted">
             <p>Order has been placed!</p>
-            <button><a href="/order">Go Back</a></button>
+            <button aria-label="On Click go back to order page"><a href="/order">Go Back</a></button>
           </div>
           :
           <div className="order-content">
@@ -50,7 +50,7 @@ export default function OrderPage() {
                 handleSearch().map(item => {
                   return (
                     <div className="search-item" key={item.id}>
-                      <button onClick={() => handleAddToCart(item)}>+</button>
+                      <button aria-label="Add to cart" onClick={() => handleAddToCart(item)}>+</button>
                       <img src={require(`../../assets/images/${item.img}`)} alt={item.dishUpper} />
                       <p>{item.dishLower}</p>
                       <p>${item.price}</p>
@@ -61,16 +61,23 @@ export default function OrderPage() {
             </div>
             <div className="order-items">
               {
-                cart.map(item => {
-                  return (
-                    <div className="order-item" key={item.id}>
-                      <p>- {item.dishLower}</p>
-                      <p><b> x{item.quantity}</b></p>
-                    </div>
-                  )
-                })
+                cart.length === 0 ?
+                <p className="cart-empty">Cart is empty!</p>
+                :
+                <>
+                  {
+                    cart.map(item => {
+                      return (
+                        <div className="order-item" key={item.id}>
+                          <p>- {item.dishLower}</p>
+                          <p><b> x{item.quantity}</b></p>
+                        </div>
+                      )
+                    })
+                  }
+                  <p className="total">Total: ${total}</p>
+                </>
               }
-              <p className="total">Total: ${total}</p>
             </div>
             <div className="order-details">
               <OrderForm onSubmit={onSubmit} />

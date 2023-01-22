@@ -48,7 +48,7 @@ export default function Confirmation() {
         </div>
         <p>Order details has been sent to: <b><i>{email}</i></b></p>
         <br/>
-        <a href="/book"><button>Go Back</button></a>
+        <a href="/book"><button aria-label="On Click go back to booking page">Go Back</button></a>
       </div>
     </>
   )
