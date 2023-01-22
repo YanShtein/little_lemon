@@ -1,10 +1,17 @@
 import { useState } from "react";
+import { validateEmail, validatePhone } from "./fieldsValidation";
 
 export default function BookingForm({ dispatch, availableTimes, submitForm }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState({
+    value: '',
+    error: false,
+  });
+  const [phone, setPhone] = useState({
+    value: '',
+    error: false,
+  });
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10)); // full date to match input type date.
   const [time, setTime] = useState('');
   const [occasion, setOccasion] = useState('');
@@ -17,12 +24,42 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
     })
   };
 
+  const handleEmail = (e) => {
+    const value = e.target.value.trim().toLowerCase();
+    if (validateEmail(value)) {
+      setEmail({
+        value,
+        error: false,
+      });
+    } else {
+      setEmail({
+        value,
+        error: true,
+      });
+    }
+  };
+
+  const handlePhone = (e) => {
+    const value = e.target.value;
+    if (validatePhone(value)) {
+      setPhone({
+        value,
+        error: false,
+      });
+    } else {
+      setPhone({
+        value,
+        error: true,
+      });
+    }
+  };
+
   return (
     <form onSubmit={e => submitForm(e, {formData: {
         firstName: firstName,
         lastName: lastName,
-        email: email,
-        phone: phone,
+        email: email.value,
+        phone: phone.value,
         date: date,
         time: time,
         occasion: occasion,
@@ -92,22 +129,24 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         <input
           type='email'
           name="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
+          value={email.value}
+          onChange={handleEmail}
           required
         />
         <label>Email</label>
+        {email.error && <small>Please enter a valid email address.</small>}
       </div>
       <div className="input-group">
         <input
           type='tel'
           name="phone"
-          value={phone}
-          onChange={e => setPhone(e.target.value)}
-          minLength="1" maxLength="10" pattern="\d[0-9]+"
+          value={phone.value}
+          onChange={handlePhone}
+          minLength="10" maxLength="10"
           required
         />
         <label>Phone Number e.g 123456789</label>
+        {phone.error && <small>Min 10 chars phone number.</small>}
       </div>
       <select
         placeholder='Select an occasion'

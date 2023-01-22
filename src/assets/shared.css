@@ -146,6 +146,11 @@ input[type="date"] {
   margin: 10px auto;
 }
 
+.input-group small {
+  display: flex;
+  color: red;
+}
+
 .input-group input {
   width: 250px;
   border: solid 1px var(--hg-black);
