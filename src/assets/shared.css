@@ -69,13 +69,18 @@ button {
   width: max-content;
 }
 
-button:hover {
-  background-color: var(--hg-cream);
-  border: 1px solid var(--primary-green);
+button:hover:not([disabled]) {
+  background-color: var(--primary-green);
+  border: 1px solid var(--hg-cream);
+  color: var(--hg-cream);
 }
 
-button:active {
+button:active:not([disabled]) {
   transform: scale(0.98);
+}
+
+button:disabled {
+  background-color: rgb(224, 224, 224);
 }
 
 a {

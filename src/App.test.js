@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import BookingPage, { updateTimes, initializeTimes } from './components/Booking/BookingPage';
-import submitForm from './components/Booking/useSubmitForm';
 
 test('Text exists in BookingForm page.', () => {
   render(

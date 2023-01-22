@@ -4,14 +4,8 @@ import { validateEmail, validatePhone } from "./fieldsValidation";
 export default function BookingForm({ dispatch, availableTimes, submitForm }) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState({
-    value: '',
-    error: false,
-  });
-  const [phone, setPhone] = useState({
-    value: '',
-    error: false,
-  });
+  const [email, setEmail] = useState({ val: '', error: false });
+  const [phone, setPhone] = useState({ val: '', error: false });
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10)); // full date to match input type date.
   const [time, setTime] = useState('');
   const [occasion, setOccasion] = useState('');
@@ -24,33 +18,19 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
     })
   };
 
-  const handleEmail = (e) => {
-    const value = e.target.value.trim().toLowerCase();
-    if (validateEmail(value)) {
-      setEmail({
-        value,
-        error: false,
-      });
+  function handleEmailBlur() {
+    if (validateEmail(email.val)) {
+      setEmail({...email, error: false})
     } else {
-      setEmail({
-        value,
-        error: true,
-      });
+      setEmail({...email, error: true})
     }
   };
 
-  const handlePhone = (e) => {
-    const value = e.target.value;
-    if (validatePhone(value)) {
-      setPhone({
-        value,
-        error: false,
-      });
+  function handlePhoneBlur() {
+    if (validatePhone(phone.val)) {
+      setPhone({...phone, error: false})
     } else {
-      setPhone({
-        value,
-        error: true,
-      });
+      setPhone({...phone, error: true})
     }
   };
 
@@ -58,8 +38,8 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
     <form onSubmit={e => submitForm(e, {formData: {
         firstName: firstName,
         lastName: lastName,
-        email: email.value,
-        phone: phone.value,
+        email: email.val,
+        phone: phone.val,
         date: date,
         time: time,
         occasion: occasion,
@@ -67,7 +47,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         reserveNumber: Math.floor(Math.random() * 1000),
       }
       })}>
-      <h2>BOOK A TABLE</h2>
+      <h2>RESERVATION ONLINE</h2>
       <p>Choose date and time:</p>
       <div className='date-time'>
         <input
@@ -129,8 +109,9 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         <input
           type='email'
           name="email"
-          value={email.value}
-          onChange={handleEmail}
+          value={email.val}
+          onChange={e => setEmail({...email, val: e.target.value})}
+          onBlur={handleEmailBlur}
           required
         />
         <label>Email</label>
@@ -140,13 +121,14 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         <input
           type='tel'
           name="phone"
-          value={phone.value}
-          onChange={handlePhone}
-          minLength="10" maxLength="10"
+          value={phone.val}
+          onChange={e => setPhone({...email, val: e.target.value})}
+          onBlur={handlePhoneBlur}
+          minLength="10" maxLength="12"
           required
         />
         <label>Phone Number e.g 123456789</label>
-        {phone.error && <small>Min 10 chars phone number.</small>}
+        {phone.error && <small>Min 10 chars for phone number [0-9].</small>}
       </div>
       <select
         placeholder='Select an occasion'
@@ -159,7 +141,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         <option label="Anniversary" value="Anniversary">Anniversary</option>
         <option label="Business" value="Business">Business</option>
       </select>
-      <button type="submit">Confirm booking</button>
+      <button disabled={phone.error || email.error} type="submit">Confirm booking</button>
     </form>
   )
 };
