@@ -2,14 +2,16 @@ import { useState } from "react";
 import { validateEmail, validatePhone } from "./fieldsValidation";
 
 export default function BookingForm({ dispatch, availableTimes, submitForm }) {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [firstName, setFirstName] = useState({ val: '', error: false });
+  const [lastName, setLastName] = useState({ val: '', error: false });
   const [email, setEmail] = useState({ val: '', error: false });
   const [phone, setPhone] = useState({ val: '', error: false });
   const [date, setDate] = useState(new Date().toISOString().slice(0, 10)); // full date to match input type date.
   const [time, setTime] = useState('');
   const [occasion, setOccasion] = useState('');
   const [guests, setGuests] = useState('2');
+
+  const disableBtn = phone.error || email.error || firstName.error || lastName.error;
 
   function handleDateReducer() {
     dispatch({
@@ -34,10 +36,28 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
     }
   };
 
+  function handleFirstNameBlur() {
+    const textRegex = /[a-zA-Z]{3,15}$/;
+    if (textRegex.test(firstName.val)) {
+      setFirstName({...firstName, error: false})
+    } else {
+      setFirstName({...firstName, error: true})
+    }
+  };
+
+  function handleLastNameBlur() {
+    const textRegex = /[a-zA-Z]{3,15}/;
+    if (textRegex.test(lastName.val)) {
+      setLastName({...lastName, error: false})
+    } else {
+      setLastName({...lastName, error: true})
+    }
+  };
+
   return (
     <form onSubmit={e => submitForm(e, {formData: {
-        firstName: firstName,
-        lastName: lastName,
+        firstName: firstName.val,
+        lastName: lastName.val,
         email: email.val,
         phone: phone.val,
         date: date,
@@ -89,21 +109,27 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         <input
           type='text'
           name="firstName"
-          value={firstName}
-          onChange={e => setFirstName(e.target.value)}
+          maxLength="15"
+          value={firstName.val}
+          onChange={e => setFirstName({...firstName, val: e.target.value})}
+          onBlur={handleFirstNameBlur}
           required
         />
-        <label htmlFor="firstName">First Name</label>
+        <label aria-label="firstName" htmlFor="firstName">First Name</label>
+        {firstName.error && <small>Please enter a valid text.</small>}
       </div>
       <div className="input-group">
         <input
           type='text'
           name="lastName"
-          value={lastName}
-          onChange={e => setLastName(e.target.value)}
+          value={lastName.val}
+          maxLength="15"
+          onChange={e => setLastName({...lastName, val: e.target.value})}
+          onBlur={handleLastNameBlur}
           required
         />
-        <label>Last Name</label>
+        <label aria-label="lastName" htmlFor="lastName">Last Name</label>
+        {lastName.error && <small>Please enter a valid text.</small>}
       </div>
       <div className="input-group">
         <input
@@ -114,7 +140,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
           onBlur={handleEmailBlur}
           required
         />
-        <label>Email</label>
+        <label aria-label="email" htmlFor="email">Email</label>
         {email.error && <small>Please enter a valid email address.</small>}
       </div>
       <div className="input-group">
@@ -124,11 +150,11 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
           value={phone.val}
           onChange={e => setPhone({...email, val: e.target.value})}
           onBlur={handlePhoneBlur}
-          minLength="10" maxLength="12"
+          minLength="9" maxLength="12"
           required
         />
-        <label>Phone Number e.g 123456789</label>
-        {phone.error && <small>Min 10 chars for phone number [0-9].</small>}
+        <label aria-label="phone" htmlFor="phone">Phone Number e.g 012-3456789</label>
+        {phone.error && <small>Min 10 chars for phone number 0-9.</small>}
       </div>
       <select
         placeholder='Select an occasion'
@@ -141,7 +167,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         <option label="Anniversary" value="Anniversary">Anniversary</option>
         <option label="Business" value="Business">Business</option>
       </select>
-      <button disabled={phone.error || email.error} type="submit">Confirm booking</button>
+      <button disabled={disableBtn} type="submit">Confirm booking</button>
     </form>
   )
 };
