@@ -29,7 +29,7 @@ export default function Confirmation() {
         <div className="details">
           <ul>
             <li>Reservation number:</li>
-            <li>Name:</li>
+            <li>Full Name:</li>
             <li>Phone Number:</li>
             <li>Reservation date:</li>
             <li>Reservation time:</li>

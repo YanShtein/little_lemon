@@ -45,21 +45,25 @@ export default function OrderPage() {
                 value={search}
                 onChange={e => setSearch(e.target.value)}/>
             </div>
-            <div className="search-menu">
+            <div className="order-items">
               {
                 handleSearch().map(item => {
                   return (
-                    <div className="search-item" key={item.id}>
-                      <button aria-label="Add to cart" onClick={() => handleAddToCart(item)}>+</button>
+                    <div className="order-item" key={item.id}>
                       <img src={require(`../../assets/images/${item.img}`)} alt={item.dishUpper} />
                       <p>{item.dishLower}</p>
-                      <p>${item.price}</p>
+                      <div>
+                        <p>${item.price}</p>
+                        <p>
+                          <button aria-label="Add to cart" onClick={() => handleAddToCart(item)}>+</button>
+                        </p>
+                      </div>
                     </div>
                   )
                 })
               }
             </div>
-            <div className="order-items">
+            <div className="cart-items">
               {
                 cart.length === 0 ?
                 <p className="cart-empty">Cart is empty!</p>
@@ -68,7 +72,7 @@ export default function OrderPage() {
                   {
                     cart.map(item => {
                       return (
-                        <div className="order-item" key={item.id}>
+                        <div className="cart-item" key={item.id}>
                           <p>- {item.dishLower}</p>
                           <p><b> x{item.quantity}</b></p>
                         </div>
@@ -79,9 +83,7 @@ export default function OrderPage() {
                 </>
               }
             </div>
-            <div className="order-details">
-              <OrderForm onSubmit={onSubmit} />
-            </div>
+            <OrderForm onSubmit={onSubmit} />
           </div>
         }
       </div>

@@ -52,6 +52,11 @@ form {
 
 .details ul:first-child {
   margin-right: 50px;
+  color: var(--primary-green);
+}
+
+.details ul:nth-child(2) {
+  color: var(--hg-black);
 }
 
 svg {

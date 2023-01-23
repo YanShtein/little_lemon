@@ -36,54 +36,56 @@ export default function OrderForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={e => onSubmit(e)}>
-      <p>Order details</p>
-      <div className="input-group">
-        <input
-          type='text'
-          name="name"
-          maxLength="15"
-          value={name.val}
-          onChange={e => setName({...name, val: e.target.value})}
-          onBlur={handleNameBlur}
-          required
-        />
-        <label aria-label="name" htmlFor="name">First Name</label>
-        {name.error && <small>Please enter a valid text.</small>}
-      </div>
-      <div className="input-group">
-        <input
-          type='tel'
-          name="phone"
-          value={phone.val}
-          onChange={e => setPhone({...email, val: e.target.value})}
-          onBlur={handlePhoneBlur}
-          minLength="9" maxLength="12"
-          required/>
-        <label aria-label="phone" htmlFor="phone">Phone Number e.g 012-3456789</label>
-        {phone.error && <small>Min 10 chars for phone number 0-9.</small>}
-      </div>
-      <div className="input-group">
-        <input
-          type='email'
-          name="email"
-          value={email.val}
-          onChange={e => setEmail({...email, val: e.target.value})}
-          onBlur={handleEmailBlur}
-          required
-        />
-        <label aria-label="email" htmlFor="email">Email</label>
-        {email.error && <small>Please enter a valid email address.</small>}
-      </div>
-      <div className="input-group">
-        <input
-          name="address"
-          value={address}
-          onChange={e => setAddress(e.target.value)}
-          required/>
-        <label>Delivery Address</label>
-      </div>
-      <button aria-label="Submit Order" disabled={cart.length === 0} type="submit">CHECKOUT</button>
-    </form>
+    <div className="order-details">
+      <form onSubmit={e => onSubmit(e)}>
+        <p>Order details</p>
+        <div className="input-group">
+          <input
+            type='text'
+            name="name"
+            maxLength="15"
+            value={name.val}
+            onChange={e => setName({...name, val: e.target.value})}
+            onBlur={handleNameBlur}
+            required
+          />
+          <label aria-label="name" htmlFor="name">First Name</label>
+          {name.error && <small>Please enter a valid text.</small>}
+        </div>
+        <div className="input-group">
+          <input
+            type='tel'
+            name="phone"
+            value={phone.val}
+            onChange={e => setPhone({...email, val: e.target.value})}
+            onBlur={handlePhoneBlur}
+            minLength="9" maxLength="12"
+            required/>
+          <label aria-label="phone" htmlFor="phone">Phone Number e.g 012-3456789</label>
+          {phone.error && <small>Min 10 chars for phone number 0-9.</small>}
+        </div>
+        <div className="input-group">
+          <input
+            type='email'
+            name="email"
+            value={email.val}
+            onChange={e => setEmail({...email, val: e.target.value})}
+            onBlur={handleEmailBlur}
+            required
+          />
+          <label aria-label="email" htmlFor="email">Email</label>
+          {email.error && <small>Please enter a valid email address.</small>}
+        </div>
+        <div className="input-group">
+          <input
+            name="address"
+            value={address}
+            onChange={e => setAddress(e.target.value)}
+            required/>
+          <label>Delivery Address</label>
+        </div>
+        <button aria-label="Submit Order" disabled={cart.length === 0} type="submit">CHECKOUT</button>
+      </form>
+    </div>  
   )
 };
