@@ -8,12 +8,14 @@ Final META course project.
 > <a href="https://www.figma.com/file/J0wZBiUwOUjlMKuwc3C9IB/Little-Lemon?node-id=0%3A1&t=WDE7ZFXVAkO2W12K-0"> -> Little Lemon website wireframe & prototype in Figma <- </a>
 ###### Click the Figma icon in the upper left corner to see all the project pages.
 
-<h1 font-size: 14px>The website uses responsive design making sure to follow best practices as much as possible regarding the design, semantic HTML, and improving site accessibility.</h1>
+### The website uses responsive design making sure to follow best practices as much as possible regarding the design, semantic HTML, and improving site accessibility.
 
 <b>Built with & techs used:</b>
+
 React, useReducer, useState, useNavigation, Context, Jest, localStorage, Visual Studio Code, APIs, Figma.
 
 <b>About the Little Lemon (fictitious) restaurant project:
+
 The Smith family owns a restaurant, which they would like to set a responsive website for.</b>
 They would like to add the following:
 - Option for booking a table at the restaurant.
@@ -21,6 +23,7 @@ They would like to add the following:
 - Visitors can look up the restaurant menu.
 
 - Website functionality:
+
 * Booking a table:
 >> Form - Uses fieldsValidation file and other custom validation functions,
 to ensure on the client side, that user enters the correct information that will be sent to the server, form submittion function takes that information as a parameter.
