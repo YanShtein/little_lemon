@@ -14,7 +14,7 @@ The website uses responsive design making sure to follow best practices as much 
 
 <hr>
 
-### Built with & techs used:<br>
+### Built with & techs used:
 React, useReducer, useState, useNavigation, Context, Jest, localStorage, Visual Studio Code, APIs, Figma.
 
 <hr>
@@ -22,13 +22,13 @@ React, useReducer, useState, useNavigation, Context, Jest, localStorage, Visual 
 ### About the ${\color{Yellow}Little\ Lemon}$ (fictitious) restaurant project:
 The Smith family owns a restaurant, which they would like to set a responsive website for.</b>
 They would like to add the following:
-- Option for booking a table at the restaurant.
-- Incorporating a simple Online ordering system.
-- Visitors can look up the restaurant menu.
+- [x] Option for booking a table at the restaurant.
+- [x] Incorporating a simple Online ordering system.
+- [x] Visitors can look up the restaurant menu.
 
 <hr>
 
-### Website functionality:
+### <ins>Website functionality:</ins>
 
 #### Booking a table:
 - Form: Uses fieldsValidation file and other custom validation functions,
