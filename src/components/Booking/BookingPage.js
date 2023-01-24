@@ -35,6 +35,16 @@ export default function BookingPage() {
             dispatch,
           }}
         />
+        <iframe
+          style={{border: 'none', maxWidth: '80%', margin: '30px auto'}} 
+          title="Google Maps"
+          width="600"
+          height="450"
+          loading="lazy"
+          allowFullScreen
+          referrerPolicy="no-referrer-when-downgrade"
+          src="http://maps.google.com/maps?q=41.880378,-87.842680&z=16&output=embed">
+        </iframe>
       </div>
     </>
   )
