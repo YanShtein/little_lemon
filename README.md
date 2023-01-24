@@ -7,6 +7,7 @@ Final META course project.
 > https://www.coursera.org/professional-certificates/meta-front-end-developer/
 
 <b>Little Lemon website wireframe & prototype in Figma:</b>
+
 <small>Click the Figma icon in the upper left corner to see all the project pages.</small>
 https://www.figma.com/file/J0wZBiUwOUjlMKuwc3C9IB/Little-Lemon?node-id=0%3A1&t=WDE7ZFXVAkO2W12K-0
 
