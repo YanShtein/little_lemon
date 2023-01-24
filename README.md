@@ -1,20 +1,24 @@
-## LITTLE LEMON restaurant website.
-
 ### README - under construction.
 
-Final META course project.
+### Final META course project - Little Lemon restaurant website using React.
 > <a href="https://www.coursera.org/professional-certificates/meta-front-end-developer/"> -> Meta Front-End Developer Professional Certificate <- </a>
 
-> <a href="https://www.figma.com/file/J0wZBiUwOUjlMKuwc3C9IB/Little-Lemon?node-id=0%3A1&t=WDE7ZFXVAkO2W12K-0"> -> Little Lemon website wireframe & prototype in Figma <- </a>
+The website uses responsive design making sure to follow best practices as much as possible regarding the design, semantic HTML, and improving site accessibility.
+
+<hr>
+
+### Figma:
 ###### Click the Figma icon in the upper left corner to see all the project pages.
+<a href="https://www.figma.com/file/J0wZBiUwOUjlMKuwc3C9IB/Little-Lemon?node-id=0%3A1&t=WDE7ZFXVAkO2W12K-0"> -> Little Lemon website wireframe & prototype in Figma <- </a>
 
-### The website uses responsive design making sure to follow best practices as much as possible regarding the design, semantic HTML, and improving site accessibility.
+<hr>
 
-<b>Built with & techs used:</b>
-
+### Built with & techs used:<br>
 React, useReducer, useState, useNavigation, Context, Jest, localStorage, Visual Studio Code, APIs, Figma.
 
-<b>About the Little Lemon (fictitious) restaurant project:
+<hr>
+
+### About the Little Lemon (fictitious) restaurant project:
 
 The Smith family owns a restaurant, which they would like to set a responsive website for.</b>
 They would like to add the following:
@@ -22,7 +26,9 @@ They would like to add the following:
 - Incorporating a simple Online ordering system.
 - Visitors can look up the restaurant menu.
 
-- Website functionality:
+<hr>
+
+### Website functionality:
 
 * Booking a table:
 >> Form - Uses fieldsValidation file and other custom validation functions,
