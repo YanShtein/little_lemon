@@ -117,18 +117,6 @@ p {
   font-family: var(--family-p-a);
 }
 
-.accesibility {
-  cursor: pointer;
-  position: fixed;
-  top: 90px;
-  left: 0px;
-}
-
-.accesibility img {
-  height: 45px;
-  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
-}
-
 /* --------------> Input --------------> */
 
 select,

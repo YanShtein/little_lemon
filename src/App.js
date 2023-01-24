@@ -5,7 +5,6 @@ import { Routes, Route } from "react-router-dom";
 import MenuPage from "./components/Menu/MenuPage";
 import { AppProvider } from './components/context/AppContext';
 import Confirmation from "./components/Booking/Confirmation";
-// import './assets/shared.css';
 
 function App() {
   return (
@@ -23,10 +22,5 @@ function App() {
     </AppProvider>
   );
 };
-
-// {/* <div className='accesibility'>
-//   <img src={require('./assets/images/accesibility.JPG')} alt="Accesibility" />
-// </div> */}
-// {/* <Header /> */}
 
 export default App;
