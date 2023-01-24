@@ -30,29 +30,32 @@ They would like to add the following:
 
 ### Website functionality:
 
-* Booking a table:
->> Form - Uses fieldsValidation file and other custom validation functions,
-to ensure on the client side, that user enters the correct information that will be sent to the server, form submittion function takes that information as a parameter.
->> Form submittion & validation - useSubmitForm custom hook uses state and useEffect to handle the submittion process:
-submitForm function, takes formData as a parameter, and calls the submitAPI function that is responsible for checking data validity, and if succesfull returns true.
-than formData is saved in a state, and used in useEffect:
-- saving data to localStorage.
-- redirecting the user to Confirmation page, passing the formData as a state object, to persist the form data across the navigation.
+#### Booking a table:
+- Form: Uses fieldsValidation file and other custom validation functions,
+  to ensure on the client side, user enters the correct information that will be sent to the server. 
+  form submittion function takes that information as a parameter.
+  
+- Form submittion & validation: useSubmitForm custom hook uses state and useEffect to handle the submittion process:
+  submitForm function, takes formData as a parameter, and calls the submitAPI function that is responsible for checking data validity, and if succesfull     returns true. than formData is saved in a state, and used in useEffect:
+  - saving data to localStorage.
+  - redirecting the user to Confirmation page, passing the formData as a state object, to persist the form data across the navigation.
 
-* Confirmation page:
->> uses the location state passed from the bookingForm, then the component destructures the state object extracting the form fields that are used in the confirmation details.
+#### Booking Confirmation page:
+- uses the location state passed from the bookingForm, then the component destructures the state object extracting the form fields that are used in the       confirmation details.
 
-* Order Online:
->> Search section - useSearch custom hook handles searching throught list of menu items.
-the hook uses Context to access the menuData from the global context and input value from search.
->> Cart section - shows items added to cart, each item clicked will be dispatched to the AppReducer function with the ADD_TO_CART action.
-the function will check if the item is already in cart, if so the function increases the quantity by 1 using the map method.
-otherwise, it will add the item to the cart with quantity of 1.
-A new state object will be retuned with the updates in cart array.
-- mapping over the cart array, to show items ordered details.
-- total variable calculates using map and reducer total price and quanity for each item added.
->> Form fileds use custom validation.
+#### Order Online:
+- Search section: useSearch custom hook handles searching throught list of menu items. 
+  the hook uses Context to access the menuData from the global context and input value from search.
+- Cart section: shows items added to cart, each item clicked will be dispatched to the AppReducer function with the ADD_TO_CART action.
+  the function will check if the item is already in cart, if so the function increases the quantity by 1 using the map method.
+  otherwise, it will add the item to the cart with quantity of 1.
+  A new state object will be retuned with the updates in cart array.
+- Map section: maps over the cart array, returning items ordered details.
+- Total variable calculates using map and reducer total price and quanity for each item added.
+- Form fields use custom validation as in BookingForm.
 
+<hr>
+  
 Files structure:
 - src/
   - assets/
