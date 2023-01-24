@@ -1,12 +1,12 @@
-# LITTLE LEMON restaurant website.
+## LITTLE LEMON restaurant website.
 
-# README - under construction. #
+### README - under construction.
 
 Final META course project.
 > <a href="https://www.coursera.org/professional-certificates/meta-front-end-developer/"> -> Meta Front-End Developer Professional Certificate <- </a>
 
 > <a href="https://www.figma.com/file/J0wZBiUwOUjlMKuwc3C9IB/Little-Lemon?node-id=0%3A1&t=WDE7ZFXVAkO2W12K-0"> -> Little Lemon website wireframe & prototype in Figma <- </a>
-<h1 font-size: 14px>Click the Figma icon in the upper left corner to see all the project pages.</h1>
+###### Click the Figma icon in the upper left corner to see all the project pages.
 
 <h1 font-size: 14px>The website uses responsive design making sure to follow best practices as much as possible regarding the design, semantic HTML, and improving site accessibility.</h1>
 
