@@ -2,8 +2,8 @@
 .article {
   position: relative;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
   align-items: center;
   justify-content: space-evenly;
   background-color: #495E57;
@@ -32,6 +32,7 @@
   color: var(--primary-yellow);
   font-family: var(--family-h2-h3);
   font-size: var(--h2-hd);
+  margin: 0;
 }
 
 .article-content h3 {
@@ -80,15 +81,17 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 47px;
-  margin: 30px 0;
+  margin: 30px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  flex: 1 1 200px;
   border: 1px solid var(--hg-cream);
   height: 400px;
   width: 300px;
+  max-width: 80%;
   background-color: var(--hg-cream);
   border-radius: var(--border-radius);
 }

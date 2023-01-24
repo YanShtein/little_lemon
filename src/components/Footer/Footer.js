@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="footer">
-        <img src={require('../../assets/images/footer.JPG')} alt="Lemon" />
+        <img src={require('../../assets/images/table.JPG')} alt="Lemon" />
         <section>
           <p>Doormat Navigation</p>
           <Nav />

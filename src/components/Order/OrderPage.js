@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import './order.css';
 import OrderForm from "./OrderForm";
 import useSearch from "./useSearch";
+import { addCartSvg, removeCartSvg } from "../../assets/svg";
 
 export default function OrderPage() {
   const { cart, dispatch } = useContext(AppContext);
@@ -14,6 +15,13 @@ export default function OrderPage() {
   function handleAddToCart(item) {
     dispatch({
       type: 'ADD_TO_CART',
+      payload: item,
+    })
+  };
+
+  function handleRemoveFromCart(item) {
+    dispatch({
+      type: 'REMOVE_FROM_CART',
       payload: item,
     })
   };
@@ -52,12 +60,11 @@ export default function OrderPage() {
                     <div className="order-item" key={item.id}>
                       <img src={require(`../../assets/images/${item.img}`)} alt={item.dishUpper} />
                       <p>{item.dishLower}</p>
-                      <div>
-                        <p>${item.price}</p>
-                        <p>
-                          <button aria-label="Add to cart" onClick={() => handleAddToCart(item)}>+</button>
-                        </p>
-                      </div>
+                      <p>
+                        <span>${item.price}</span>
+                        <button aria-label="Remove from cart" onClick={() => handleRemoveFromCart(item.id)}>{removeCartSvg}</button>
+                        <button aria-label="Add to cart" onClick={() => handleAddToCart(item)}>{addCartSvg}</button>
+                      </p>
                     </div>
                   )
                 })
@@ -73,8 +80,10 @@ export default function OrderPage() {
                     cart.map(item => {
                       return (
                         <div className="cart-item" key={item.id}>
-                          <p>- {item.dishLower}</p>
-                          <p><b> x{item.quantity}</b></p>
+                          <p>
+                            <span>- {item.dishLower}</span>
+                            <span><b>x{item.quantity}</b></span>
+                          </p>
                         </div>
                       )
                     })

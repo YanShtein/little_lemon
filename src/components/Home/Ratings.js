@@ -12,7 +12,9 @@ export default function Ratings() {
               <div className="ratings-card" key={rating.id}>
                 <p>{starSvg}{starSvg}{starSvg}{starSvg}{starSvg}</p>
                 <div className='customer'>
-                  <img src={require(`../../assets/images/${rating.img}`)} alt={rating.name} />
+                  <a href='https://this-person-does-not-exist.com/en'>
+                    <img src={require(`../../assets/images/${rating.img}`)} alt={rating.name}/>
+                  </a>
                   <p>{rating.name}</p>
                 </div>
                 <p>{rating.text}</p>

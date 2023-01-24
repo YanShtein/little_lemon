@@ -9,7 +9,7 @@ import Confirmation from "./components/Booking/Confirmation";
 function App() {
   return (
     <AppProvider>
-      <img className="bg" alt="Site Background" src={require('../src/assets/images/footer.JPG')}/>
+      <img className="bg" alt="Site Background" src={require('../src/assets/images/table.JPG')}/>
       <div className="container">
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
