@@ -1,7 +1,8 @@
 ### README - under construction.
 
 ### Final META course project - Little Lemon restaurant website using React.
-> <a href="https://www.coursera.org/professional-certificates/meta-front-end-developer/"> -> Meta Front-End Developer Professional Certificate <- </a>
+
+[Meta Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer/)
 
 The website uses responsive design making sure to follow best practices as much as possible regarding the design, semantic HTML, and improving site accessibility.
 
@@ -9,7 +10,7 @@ The website uses responsive design making sure to follow best practices as much 
 
 ### Figma:
 ###### Click the Figma icon in the upper left corner to see all the project pages.
-<a href="https://www.figma.com/file/J0wZBiUwOUjlMKuwc3C9IB/Little-Lemon?node-id=0%3A1&t=WDE7ZFXVAkO2W12K-0"> -> Little Lemon website wireframe & prototype in Figma <- </a>
+[-> Little Lemon website wireframe & prototype in Figma <-](https://www.figma.com/file/J0wZBiUwOUjlMKuwc3C9IB/Little-Lemon?node-id=0%3A1&t=WDE7ZFXVAkO2W12K-0)
 
 <hr>
 
@@ -19,7 +20,6 @@ React, useReducer, useState, useNavigation, Context, Jest, localStorage, Visual 
 <hr>
 
 ### About the Little Lemon (fictitious) restaurant project:
-
 The Smith family owns a restaurant, which they would like to set a responsive website for.</b>
 They would like to add the following:
 - Option for booking a table at the restaurant.
