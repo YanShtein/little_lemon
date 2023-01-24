@@ -1,6 +1,6 @@
 ### README - under construction.
 
-### Final META course project - Little Lemon restaurant website using React.
+### Final course project - ${\color{Yellow}Little\ Lemon}$ restaurant website using React.
 
 [Meta Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer/)
 
@@ -19,7 +19,7 @@ React, useReducer, useState, useNavigation, Context, Jest, localStorage, Visual 
 
 <hr>
 
-### About the Little Lemon (fictitious) restaurant project:
+### About the ${\color{Yellow}Little\ Lemon}$ (fictitious) restaurant project:
 The Smith family owns a restaurant, which they would like to set a responsive website for.</b>
 They would like to add the following:
 - Option for booking a table at the restaurant.
