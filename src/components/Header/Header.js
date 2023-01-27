@@ -23,11 +23,11 @@ export default function Header() {
           <Nav />
         </div>
       </div>
-      <span
-        className="hamburger-btn"
-        onClick={toggleHamburger}>{hamburgerSvg}
-      </span>
-      <div className="header">
+      <div className="header fixed">
+        <span
+          className="hamburger-btn"
+          onClick={toggleHamburger}>{hamburgerSvg}
+        </span>
         <Link to="/">
           <img src={require('../../assets/images/logo.png')} alt="Little Lemon Logo"/>
         </Link>

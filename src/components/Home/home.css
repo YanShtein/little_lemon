@@ -2,8 +2,7 @@
 .article {
   position: relative;
   display: flex;
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
+  margin-top: 70px;
   align-items: center;
   justify-content: space-evenly;
   background-color: #495E57;
@@ -46,6 +45,7 @@
   font-family: var(--family-p-a);
   color: var(--hg-cream);
   font-size: var(--par);
+  line-height: 1.3;
 }
 
 /* ---------------------> SPECIALS ---------------------> */

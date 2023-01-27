@@ -72,5 +72,5 @@ export {
   businessSvg, 
   generalSvg,
   addCartSvg,
-  removeCartSvg
+  removeCartSvg,
 };
