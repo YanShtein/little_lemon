@@ -167,7 +167,7 @@ export default function BookingForm({ dispatch, availableTimes, submitForm }) {
         <option label="Anniversary" value="Anniversary">Anniversary</option>
         <option label="Business" value="Business">Business</option>
       </select>
-      <button aria-label="On Click confirm booking" disabled={disableBtn} type="submit">Confirm booking</button>
+      <button aria-label="On Click confirm booking details" disabled={disableBtn} type="submit">Confirm booking</button>
     </form>
   )
 };

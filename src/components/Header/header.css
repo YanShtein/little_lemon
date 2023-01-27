@@ -1,3 +1,7 @@
+header {
+  height: 70px;
+}
+
 .header {
   display: flex;
   flex-direction: row;

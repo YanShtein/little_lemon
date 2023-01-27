@@ -12,7 +12,7 @@ export default function Ratings() {
               <div className="ratings-card" key={rating.id}>
                 <p>{starSvg}{starSvg}{starSvg}{starSvg}{starSvg}</p>
                 <div className='customer'>
-                  <a href='https://this-person-does-not-exist.com/en'>
+                  <a href='https://this-person-does-not-exist.com/en' rel="noreferrer" target="_blank" aria-label='Go to external page'>
                     <img src={require(`../../assets/images/${rating.img}`)} alt={rating.name}/>
                   </a>
                   <p>{rating.name}</p>

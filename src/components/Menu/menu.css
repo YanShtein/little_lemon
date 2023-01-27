@@ -2,7 +2,7 @@
   text-align: center;
   max-width: 800px;
   padding: 15px;
-  margin-top: 70px;
+  margin: 50px auto;
   background-color: var(--hg-cream);
   border-radius: var(--border-radius);
 }
@@ -65,5 +65,8 @@
   }
   .menu-content-item p {
     text-align: center;
+  }
+  .menu {
+    margin: 0px auto;
   }
 }

@@ -46,6 +46,7 @@ export default function BookingPage() {
           src="http://maps.google.com/maps?q=41.880378,-87.842680&z=16&output=embed">
         </iframe>
       </div>
+      <small className="rights">© All rights reserved to Little Lemon</small>
     </>
   )
 };

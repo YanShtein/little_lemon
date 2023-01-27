@@ -1,5 +1,4 @@
 .footer {
-  color: var(--hg-cream);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -19,13 +18,27 @@
 .footer p {
   font-size: 18px;
   font-weight: 500;
+  color: var(--hg-cream);
   border-bottom: 1px solid var(--hg-cream);
 }
 
+.footer li a:hover {
+  border-bottom: 1px solid var(--hg-cream);
+}
+
+.footer li a {
+  color: white;
+  font-weight: bold;
+}
+
 .footer li {
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--family-p-a);
   height: 20px;
+}
+
+.contact {
+  color: var(--primary-yellow);
 }
 
 @media (max-width: 373px) {

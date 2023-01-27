@@ -64,9 +64,9 @@ body {
   z-index: 5;
 }
 
+a[rel="href"],
 button {
   padding: 10px;
-  margin: 10px auto;
   cursor: pointer;
   font-family: var(--family-p-a);
   color: var(--hg-black);
@@ -78,13 +78,19 @@ button {
   width: max-content;
 }
 
-button:hover:not([disabled]) {
+button {
+  margin: 10px auto;
+}
+
+button:hover:not([disabled]),
+a[rel="href"]:hover {
   background-color: var(--primary-green);
   border: 1px solid var(--hg-cream);
   color: var(--hg-cream);
 }
 
-button:active:not([disabled]) {
+button:active:not([disabled]),
+a[rel="href"]:active {
   transform: scale(0.98);
 }
 
@@ -192,4 +198,12 @@ input[type="date"] {
   background-color: white;
   padding: 0 3px;
   color: var(--primary-green);
+}
+
+.rights {
+  display: block;
+  text-align: center;
+  margin: 30px;
+  color: var(--primary-green);
+  font-weight: bold;
 }

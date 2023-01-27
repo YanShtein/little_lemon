@@ -43,7 +43,7 @@ export default function OrderPage() {
           submitted ?
           <div className="submitted">
             <p>Order has been placed!</p>
-            <button aria-label="On Click go back to order page"><a href="/order">Go Back</a></button>
+            <a rel="href" href="/order" aria-label="Go back to order page">Go Back</a>
           </div>
           :
           <div className="order-content">
@@ -96,6 +96,7 @@ export default function OrderPage() {
           </div>
         }
       </div>
+      <small className="rights">© All rights reserved to Little Lemon</small>
     </>
   )
 };

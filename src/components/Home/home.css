@@ -2,7 +2,6 @@
 .article {
   position: relative;
   display: flex;
-  margin-top: 70px;
   align-items: center;
   justify-content: space-evenly;
   background-color: #495E57;
@@ -142,6 +141,14 @@ h3 {
   color: var(--hg-black);
   font-size: var(--card-a);
   font-weight: 600;
+}
+
+.card-text a:hover {
+  color: var(--primary-green);
+}
+
+.card-text a:active {
+  transform: scale(0.97);
 }
 
 .card-text svg {
