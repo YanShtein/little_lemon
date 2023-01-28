@@ -1,5 +1,3 @@
-### README - under construction.
-
 ### Final course project - ${\color{Yellow}Little\ Lemon}$ restaurant website using React.
 
 [Meta Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer/)
