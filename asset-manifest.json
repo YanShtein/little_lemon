@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/little_lemon/static/css/main.942e779e.css",
+    "main.js": "/little_lemon/static/js/main.92cc73bd.js",
+    "static/media/person3.jpeg": "/little_lemon/static/media/person3.cfb3d5dbf9fe6b56fe4e.jpeg",
+    "static/media/person1.jpeg": "/little_lemon/static/media/person1.767b085de199bc99ebf8.jpeg",
+    "static/media/person2.jpeg": "/little_lemon/static/media/person2.a4c99de37fed195908ef.jpeg",
+    "static/media/person4.jpeg": "/little_lemon/static/media/person4.8295732a9cef55fd0ef5.jpeg",
+    "static/media/map.JPG": "/little_lemon/static/media/map.55f872642187d0887e1d.JPG",
+    "static/media/salad.JPG": "/little_lemon/static/media/salad.ab6dc90dfce672449048.JPG",
+    "static/media/logo.png": "/little_lemon/static/media/logo.d4cae6fac8384c2dae04.png",
+    "static/media/pasta.JPG": "/little_lemon/static/media/pasta.97be97b31c09fd324b3b.JPG",
+    "static/media/fish.JPG": "/little_lemon/static/media/fish.071a58741337a4a39a74.JPG",
+    "static/media/cheeseBread.JPG": "/little_lemon/static/media/cheeseBread.dd7551cfb2ee2f5ad0c2.JPG",
+    "static/media/main.JPG": "/little_lemon/static/media/main.d4f78372846a8a70f879.JPG",
+    "static/media/oysters.JPG": "/little_lemon/static/media/oysters.4bdd9951b3d1b26b8834.JPG",
+    "static/media/potatoes.JPG": "/little_lemon/static/media/potatoes.ad13b999f72b28600c08.JPG",
+    "static/media/table.JPG": "/little_lemon/static/media/table.5ff9e454281bf065bf5e.JPG",
+    "static/media/footer2.JPG": "/little_lemon/static/media/footer2.127fe25973844c1fd5f9.JPG",
+    "static/media/lemon.JPG": "/little_lemon/static/media/lemon.0fa9008f3f6397eb0ff6.JPG",
+    "index.html": "/little_lemon/index.html",
+    "main.942e779e.css.map": "/little_lemon/static/css/main.942e779e.css.map",
+    "main.92cc73bd.js.map": "/little_lemon/static/js/main.92cc73bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.942e779e.css",
+    "static/js/main.92cc73bd.js"
+  ]
+}
