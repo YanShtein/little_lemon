@@ -10,17 +10,17 @@ import Header from "./components/Header/Header";
 function App() {
   return (
     <AppProvider>
-      <img className="bg" alt="Site Background" src={require('../src/assets/images/table.JPG')}/>
-      <div className="container">
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/menu" element={<MenuPage />}></Route>
-          <Route path="/order" element={<OrderPage />}></Route>
-          <Route path="/book" element={<BookingPage />}></Route>
-          <Route path="/confirmation" element={<Confirmation />}></Route>
-        </Routes>
-      </div>
+        <img className="bg" alt="Site Background" src={require('../src/assets/images/table.JPG')}/>
+        <div className="container">
+          <Header />
+          <Routes>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/menu" element={<MenuPage />}></Route>
+            <Route path="/order" element={<OrderPage />}></Route>
+            <Route path="/book" element={<BookingPage />}></Route>
+            <Route path="/confirmation" element={<Confirmation />}></Route>
+          </Routes>
+        </div>
     </AppProvider>
   );
 };

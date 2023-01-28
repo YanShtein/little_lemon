@@ -4,6 +4,7 @@ import { fetchAPI } from "./bookingAPI";
 import '../../assets/shared.css';
 import './book.css';
 import useSubmitForm from "./useSubmitForm";
+import { useEffect } from "react";
 
 function initializeTimes() {
   let today = new Date();
@@ -22,6 +23,10 @@ const updateTimes = (availableTimes, action) => {
 export default function BookingPage() {
   const { submitForm } = useSubmitForm();
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

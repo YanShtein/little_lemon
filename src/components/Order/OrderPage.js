@@ -5,12 +5,17 @@ import OrderForm from "./OrderForm";
 import useSearch from "./useSearch";
 import { Link } from "react-router-dom";
 import { addCartSvg, removeCartSvg } from "../../assets/svg";
+import { useEffect } from "react";
 
 export default function OrderPage() {
   const { cart, dispatch } = useContext(AppContext);
   const [search, setSearch] = useState('');
   const { handleSearch } = useSearch({ search });
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   function handleAddToCart(item) {
     dispatch({

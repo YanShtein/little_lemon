@@ -3,9 +3,14 @@ import './menu.css';
 import { useContext } from "react";
 import { AppContext } from '../context/AppContext';
 import Footer from '../Footer/Footer';
+import { useEffect } from "react";
 
 export default function MenuPage() {
   const { menuData } = useContext(AppContext);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
