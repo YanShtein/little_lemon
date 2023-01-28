@@ -3,6 +3,7 @@ import { AppContext } from '../context/AppContext';
 import './order.css';
 import OrderForm from "./OrderForm";
 import useSearch from "./useSearch";
+import { Link } from "react-router-dom";
 import { addCartSvg, removeCartSvg } from "../../assets/svg";
 
 export default function OrderPage() {
@@ -41,7 +42,7 @@ export default function OrderPage() {
           submitted ?
           <div className="submitted">
             <p>Order has been placed!</p>
-            <a rel="href" href="/order" aria-label="Go back to order page">Go Back</a>
+            <Link to="/" rel="href" aria-label="Go back to Home page">Go Back</Link>
           </div>
           :
           <div className="order-content">

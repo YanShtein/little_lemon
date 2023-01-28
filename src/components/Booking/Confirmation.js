@@ -1,5 +1,5 @@
 import { birthdaySvg, anniversarySvg, businessSvg, generalSvg } from "../../assets/svg";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Confirmation() {
   const { state } = useLocation();
@@ -44,7 +44,7 @@ export default function Confirmation() {
         </div>
         <p>Order details has been sent to: <b><i>{email}</i></b></p>
         <br/>
-        <a rel="href" href="/book" aria-label="Go back to Booking page">Go Back</a>
+        <Link to="/book" rel="href" aria-label="Go back to Booking page">Go Back</Link>
       </div>
     </>
   )
