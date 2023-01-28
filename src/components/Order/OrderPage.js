@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { AppContext } from '../context/AppContext';
-import Header from "../Header/Header";
 import './order.css';
 import OrderForm from "./OrderForm";
 import useSearch from "./useSearch";
@@ -36,7 +35,6 @@ export default function OrderPage() {
 
   return (
     <>
-      <Header />
       <div className="order">
         <h2>ORDER ONLINE</h2>
         {

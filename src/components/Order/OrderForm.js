@@ -59,10 +59,15 @@ export default function OrderForm({ onSubmit }) {
             value={phone.val}
             onChange={e => setPhone({...email, val: e.target.value})}
             onBlur={handlePhoneBlur}
-            minLength="9" maxLength="12"
+            minLength="11" maxLength="11"
             required/>
-          <label aria-label="phone" htmlFor="phone">Phone Number e.g 012-3456789</label>
-          {phone.error && <small>Min 10 chars for phone number 0-9.</small>}
+          <label aria-label="phone" htmlFor="phone">Phone Number e.g +0123456789</label>
+          {phone.error && 
+            <>
+              <small>Phone number should start with + or 0.</small>
+              <small>Min & Max 10 numbers.</small>
+            </>
+          }
         </div>
         <div className="input-group">
           <input

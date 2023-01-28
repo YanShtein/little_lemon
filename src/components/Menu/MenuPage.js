@@ -2,7 +2,6 @@ import '../../assets/shared.css';
 import './menu.css';
 import { useContext } from "react";
 import { AppContext } from '../context/AppContext';
-import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 
 export default function MenuPage() {
@@ -10,7 +9,6 @@ export default function MenuPage() {
 
   return (
     <>
-      <Header />
       <div className='menu'>
         <h2>Little Lemon menu</h2>
         <div className='menu-content'>

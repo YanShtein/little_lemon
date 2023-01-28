@@ -1,8 +1,5 @@
 import { birthdaySvg, anniversarySvg, businessSvg, generalSvg } from "../../assets/svg";
-
-import React from 'react'
 import { useLocation } from "react-router-dom";
-import Header from "../Header/Header";
 
 export default function Confirmation() {
   const { state } = useLocation();
@@ -22,7 +19,6 @@ export default function Confirmation() {
 
   return (
     <>
-      <Header />
       <div className="reserve">
         <h2>Table reserved at the Chicago Branch!</h2>
         <p>We have received your reservation with the following information:</p>

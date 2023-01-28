@@ -203,7 +203,7 @@ input[type="date"] {
 .rights {
   display: block;
   text-align: center;
-  margin: 30px;
+  margin: 30px auto;
   color: var(--primary-green);
   font-weight: bold;
 }

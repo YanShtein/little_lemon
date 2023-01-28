@@ -1,5 +1,4 @@
 import { useReducer } from "react";
-import Header from "../Header/Header";
 import BookingForm from "./BookingForm";
 import { fetchAPI } from "./bookingAPI";
 import '../../assets/shared.css';
@@ -26,7 +25,6 @@ export default function BookingPage() {
 
   return (
     <>
-      <Header />
       <div className="reserve">
         <BookingForm
           {...{
@@ -35,16 +33,7 @@ export default function BookingPage() {
             dispatch,
           }}
         />
-        <iframe
-          style={{border: 'none', maxWidth: '80%', margin: '30px auto'}} 
-          title="Google Maps"
-          width="600"
-          height="450"
-          loading="lazy"
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-          src="http://maps.google.com/maps?q=41.880378,-87.842680&z=16&output=embed">
-        </iframe>
+        <img className="map" src={require('../../assets/images/map.JPG')} alt="Little Lemon location"/>
       </div>
       <small className="rights">© All rights reserved to Little Lemon</small>
     </>
