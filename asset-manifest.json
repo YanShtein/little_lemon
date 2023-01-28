@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/little_lemon/static/css/main.942e779e.css",
-    "main.js": "/little_lemon/static/js/main.593bf353.js",
+    "main.js": "/little_lemon/static/js/main.843b6b02.js",
     "static/media/person3.jpeg": "/little_lemon/static/media/person3.cfb3d5dbf9fe6b56fe4e.jpeg",
     "static/media/person1.jpeg": "/little_lemon/static/media/person1.767b085de199bc99ebf8.jpeg",
     "static/media/person2.jpeg": "/little_lemon/static/media/person2.a4c99de37fed195908ef.jpeg",
@@ -20,10 +20,10 @@
     "static/media/lemon.JPG": "/little_lemon/static/media/lemon.0fa9008f3f6397eb0ff6.JPG",
     "index.html": "/little_lemon/index.html",
     "main.942e779e.css.map": "/little_lemon/static/css/main.942e779e.css.map",
-    "main.593bf353.js.map": "/little_lemon/static/js/main.593bf353.js.map"
+    "main.843b6b02.js.map": "/little_lemon/static/js/main.843b6b02.js.map"
   },
   "entrypoints": [
     "static/css/main.942e779e.css",
-    "static/js/main.593bf353.js"
+    "static/js/main.843b6b02.js"
   ]
 }
