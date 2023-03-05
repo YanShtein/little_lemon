@@ -1,4 +1,4 @@
-### Final course project - $${\color{yellow}Little \space Lemon}$$ restaurant website using React.
+### Final course project - *Little Lemon* restaurant website using React.
 
 [Meta Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer/)
 
@@ -17,7 +17,7 @@ React, useReducer, useState, useNavigation, Context, Jest, localStorage, Visual 
 
 <hr>
 
-### About the $${\color{Yellow}Little\ Lemon}$$ (fictitious) restaurant project:
+### About the *Little Lemon* (fictitious) restaurant project:
 The Smith family owns a restaurant, which they would like to set a responsive website for.</b>
 They would like to add the following:
 - [x] Option for booking a table at the restaurant.
